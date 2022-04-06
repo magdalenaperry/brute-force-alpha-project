@@ -1,3 +1,2 @@
-DROP DATABASE IF EXISTS physicianportal_db;
-
-CREATE DATABASE physicianportal_db;
+DROP DATABASE IF EXISTS crowdfund_db;
+CREATE DATABASE crowdfund_db;
