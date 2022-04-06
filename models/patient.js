@@ -30,27 +30,27 @@ Patient.init({
     }
   },
   password: {
-    type: DataTypes.TEXT,
+    type: DataTypes.STRING,
     allowNull: false,
   },
   sex: {
-    type: DataTypes.TEXT,
+    type: DataTypes.STRING,
     allowNull: false,
   },
   age: {
     type: DataTypes.INTEGER,
   },
   race: {
-    type: DataTypes.TEXT,
+    type: DataTypes.STRING,
   },
   street_address: {
-    type: DataTypes.TEXT,
+    type: DataTypes.STRING,
   },
   city: {
-    type: DataTypes.TEXT,
+    type: DataTypes.STRING,
   },
   state: {
-    type: DataTypes.TEXT,
+    type: DataTypes.STRING,
   },
   zipcode: {
     type: DataTypes.INTEGER,
@@ -59,27 +59,27 @@ Patient.init({
     type: DataTypes.STRING,
   },
   rx: {
-    type: DataTypes.TEXT,
+    type: DataTypes.STRING,
   },
   dx: {
-    type: DataTypes.TEXT,
+    type: DataTypes.STRING,
   },
   procedure: {
-    type: DataTypes.TEXT,
+    type: DataTypes.STRING,
   },
   insurance_name: {
-    type: DataTypes.TEXT
+    type: DataTypes.STRING
   },
   allergies: {
-    type:DataTypes.TEXT
-  },
-  history_id: {
-    type: DataTypes.TEXT,
-    references: {
-      model: 'history',
-      key: 'id'
-    }
+    type:DataTypes.STRING
   }
+  // history_id: {
+  //   type: DataTypes.TEXT,
+  //   references: {
+  //     model: 'history',
+  //     key: 'id'
+  //   }
+  // }
 
 
 

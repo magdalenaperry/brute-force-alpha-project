@@ -14,30 +14,31 @@ Physician.init({
     type: DataTypes.INTEGER,
     primaryKey: true,
     allowNull: false,
+    autoIncrement: true
   }, 
   first_name: {
-    type: DataTypes.TEXT,
-    allowNull: false,
+    type: DataTypes.STRING,
+    allowNull: false
   }, 
   last_name: {
-    type: DataTypes.TEXT,
-    allowNull: false,
+    type: DataTypes.STRING,
+    allowNull: false
   }, 
   email: {
-    type: DataTypes.TEXT,
-    allowNull: false,
+    type: DataTypes.STRING,
+    allowNull: false
   }, 
   npi: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
+    type: DataTypes.STRING,
+    allowNull: false
   }, 
   specialty: {
-    type: DataTypes.TEXT,
-    allowNull: false,
+    type: DataTypes.STRING,
+    allowNull: false
   }, 
   university: {
-    type: DataTypes.TEXT, 
-    allowNull: false,
+    type: DataTypes.STRING, 
+    allowNull: false
   }, 
   phys_image: {
     type: DataTypes.TEXT,
