@@ -1,0 +1,41 @@
+<div class="py-5"></div>
+<div class="card bg-light text-center mb-3 mx-5">
+  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+    <div class="mask"></div>
+    </a>
+  </div>
+  <div class="card-body">
+    <h4 class="text-uppercase">meet the staff at chiron</h4>
+    <p class="card-text"></p>
+  </div>
+</div>
+
+
+{{#each physicians}}
+<div class="card bg-light text-center mb-5 mx-5">
+  <div class="bg-image hover-overlay ripple mt-5" data-mdb-ripple-color="light">
+    <img src="{{phys_image}}" class="img-fluid" width="200px" />
+    {{!-- <a href="#!"> --}}
+      <div class="mask"></div>
+    </a>
+  </div>
+
+  <div class="card-body mb-5">
+    <h5 class="card-title fs-4">{{first_name}} {{last_name}}, MD</h5>
+
+    <p class="mx-5">
+      {{phys_bio}}
+    </p>
+
+    <p class="card-text text-warning text-uppercase fs-4">
+      {{specialty}}
+    </p>
+    <p class="card-text fs-5 ">{{university}}</p>
+    <a href="mailto:{{email}}" class="text-secondary">{{email}}</a>
+    {{!-- <p class="card-text">{{email}}</p> --}}
+
+    {{!-- <button type="button" class="btn btn-primary">Button</button> --}}
+  </div>
+</div>
+
+{{/each}}
