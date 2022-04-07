@@ -7,11 +7,11 @@ const {
 } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class History extends Model {}
+class History extends Model { }
 
 History.init({
   id: {
-    type: DataTypes.INTEGER, 
+    type: DataTypes.INTEGER,
     primaryKey: true
 
   },
