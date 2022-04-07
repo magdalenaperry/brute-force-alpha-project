@@ -110,7 +110,7 @@ Patient.init({
     type: DataTypes.INTEGER,
   },
   phone: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
   },
   rx: {
     type: DataTypes.TEXT,
@@ -123,28 +123,29 @@ Patient.init({
   },
   insurance_name: {
     type: DataTypes.TEXT
-  },
-  history_id: {
-    type: DataTypes.TEXT,
-    references: {
-      model: 'history',
-      key: 'id'
-    }
-  },
-  rec_drug: {
-    type: DataTypes.TEXT,
-    references: {
-      model: 'drugs',
-      key: 'id'
-    }
-  },
-  primary_symptoms: {
-    type: DataTypes.TEXT,
-    references: {
-      model: 'symptoms',
-      key: 'id',
-    }
   }
+  // ,
+  // history_id: {
+  //   type: DataTypes.TEXT,
+  //   references: {
+  //     model: 'history',
+  //     key: 'id'
+  //   }
+  // },
+  // rec_drug: {
+  //   type: DataTypes.TEXT,
+  //   references: {
+  //     model: 'drugs',
+  //     key: 'id'
+  //   }
+  // },
+  // primary_symptoms: {
+  //   type: DataTypes.TEXT,
+  //   references: {
+  //     model: 'symptoms',
+  //     key: 'id',
+  //   }
+  // }
 }, {
   sequelize,
   timestamps: false,
