@@ -14,31 +14,31 @@ Illness.init({
     autoIncrement: true
   },
   has_cancer: {
-    type: DataTypes.STRING,
+    type: DataTypes.BOOLEAN,
     allowNull: true,
   },
   has_asthma: {
-    type: DataTypes.STRING,
+    type: DataTypes.BOOLEAN,
     allowNull: true,
   },
   has_cardiac_arrest: {
-    type: DataTypes.STRING,
+    type: DataTypes.BOOLEAN,
     allowNull: true,
   },
   has_diabetes: {
-    type: DataTypes.STRING,
+    type: DataTypes.BOOLEAN,
     allowNull: true,
   },
   has_hypertension: {
-    type: DataTypes.STRING,
+    type: DataTypes.BOOLEAN,
     allowNull: true,
   },
   has_psyciatric_disorder: {
-    type: DataTypes.STRING,
+    type: DataTypes.BOOLEAN,
     allowNull: true,
   },
   has_epilepsy: {
-    type: DataTypes.STRING,
+    type: DataTypes.BOOLEAN,
     allowNull: true,
   },
 
@@ -47,7 +47,7 @@ Illness.init({
   timestamps: false,
   freezeTableName: true,
   underscored: true,
-  modelName: 'project',
+  modelName: 'illness',
 });
 
 module.exports = Illness;
