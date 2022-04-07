@@ -28,7 +28,6 @@ front end javascript
 buttons
 log in stuff
 
-
 JB
 folder: views
 home view (
