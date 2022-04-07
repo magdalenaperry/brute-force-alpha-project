@@ -43,6 +43,10 @@ Physician.init({
   phys_image: {
     type: DataTypes.TEXT,
     allowNull: false
+  }, 
+  phys_bio: {
+    type: DataTypes.TEXT,
+    allowNull: false
   }
 
 }, {
