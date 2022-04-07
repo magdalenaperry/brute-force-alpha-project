@@ -1,11 +1,11 @@
 const router = require('express').Router();
 const {
   User,
-  Patient
+  Patient, 
+  Physician
 } = require('../models')
 
 const serialize = require('../utils/serialize')
-
 
 router.get('/', async (req, res) => {
   const patientData = await Patient.findAll({
@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
   })
 })
 
-router.get('/login', (req, res) => {
+router.get('/login', async (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
@@ -28,11 +28,22 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/about', (req, res) => {
-  res.render('about');
+
+// SUCCESSFUL!
+router.get('/about', async (req, res) => {
+  const physicianData = await Physician.findAll({
+    // include: [User]
+  });
+console.log(physicianData);
+  const physicians = serialize(physicianData)
+console.log(physicians)
+
+  res.render('about', { physicians });
 });
 
-router.get('/portal', (req, res) => {
+
+
+router.get('/portal', async(req, res) => {
   res.render('patient-portal');
 });
 

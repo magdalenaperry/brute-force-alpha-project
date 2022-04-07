@@ -1,10 +1,6 @@
 const sequelize = require('../config/connection.js');
 const seedPatients = require('./patient-seed');
-
-// const seedPatients = require('./patient-seed');
-// const seedPosts = require('./post-seed');
-// const seedUsername = require('./username-seed');
-
+const seedPhysicians = require('./physician-seed');
 
 const seedAll = async () => {
   await sequelize.sync({
@@ -15,12 +11,8 @@ const seedAll = async () => {
   await seedPatients();
   console.log('\n----- PATIENTS SEEDED -----\n');
 
-  // await seedComments();
-  // console.log('\n----- COMMENTS SEEDED -----\n');
-
-  // await seedPosts();
-  // console.log('\n----- POSTS SEEDED -----\n');
-
+  await seedPhysicians();
+  console.log('\n----- Physician SEEDED -----\n');
 
   process.exit(0);
 };
