@@ -29,10 +29,10 @@ buttons
 log in stuff
 
 JB
-folder: views
+<!-- folder: views
 home view (
 user story of chiron
-)
+) -->
 login view
 <!-- about view {
 link to the phsycian and populate an img and other info 
