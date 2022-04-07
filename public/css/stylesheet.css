@@ -11,3 +11,7 @@
 .register {
   display: none;
 }
+
+.alert {
+  display: none;
+}
