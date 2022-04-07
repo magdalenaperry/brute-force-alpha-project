@@ -21,7 +21,7 @@ Illness.init({
     type: DataTypes.BOOLEAN,
     allowNull: true,
   },
-  has_cardiac_arrest: {
+  has_cardiac_disease: {
     type: DataTypes.BOOLEAN,
     allowNull: true,
   },
@@ -33,7 +33,7 @@ Illness.init({
     type: DataTypes.BOOLEAN,
     allowNull: true,
   },
-  has_psyciatric_disorder: {
+  has_psychiatric_disorder: {
     type: DataTypes.BOOLEAN,
     allowNull: true,
   },

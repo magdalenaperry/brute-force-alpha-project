@@ -1,57 +1,62 @@
 <!-- Form Name -->
-<legend>Patient History</legend>
 
-<!-- Multiple Checkboxes -->
-<form class="family-history">
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="family_history">Do you have a family history of any of the following
-      illnesses?</label>
-    <div class="col-md-4">
-      <div class="checkbox">
-        <label for="family_history-0">
-          <input type="checkbox" name="family_history" id="asthma" value="Asthma">
-          Asthma
-        </label>
-      </div>
-      <div class="checkbox">
-        <label for="family_history-1">
-          <input type="checkbox" name="family_history" id="cancer" value="Cancer">
-          Cancer
-        </label>
-      </div>
-      <div class="checkbox">
-        <label for="family_history-2">
-          <input type="checkbox" name="cardiac_disease" id="cardiac_disease" value="Cardiac disease">
-          Cardiac disease
-        </label>
-      </div>
-      <div class="checkbox">
-        <label for="family_history-3">
-          <input type="checkbox" name="diabetes" id="diabetes" value="Diabetes">
-          Diabetes
-        </label>
-      </div>
-      <div class="checkbox">
-        <label for="family_history-4">
-          <input type="checkbox" name="hypertension" id="hypertension" value="Hypertension">
-          Hypertension
-        </label>
-      </div>
-      <div class="checkbox">
-        <label for="family_history-5">
-          <input type="checkbox" name="psychiatric" id="psychiatric" value="Psychiatric disorder">
-          Psychiatric disorder
-        </label>
-      </div>
-      <div class="checkbox">
-        <label for="family_history-6">
-          <input type="checkbox" name="epilepsy" id="epilepsy" value="Epilepsy">
-          Epilepsy
-        </label>
+<div class="card mx-5 my-4">
+  <legend class="mx-5 mt-3 ">Patient History</legend>
+  <hr>
+  <!-- Multiple Checkboxes -->
+  <form class="family-history-form mx-5 mb-5">
+    <div class="form-group">
+      <label class="col-md-12 control-label" for="family_history">Do you have a family history of any of the following illnesses?</label>
+      <div class="col-md-4">
+        <br>
+        <div class="checkbox">
+          <label for="family_history-0">
+            <input type="checkbox" name="asthma" id="asthma" value="Asthma">
+            Asthma
+          </label>
+        </div>
+        <div class="checkbox">
+          <label for="family_history-1">
+            <input type="checkbox" name="cancer" id="cancer" value="Cancer">
+            Cancer
+          </label>
+        </div>
+        <div class="checkbox">
+          <label for="family_history-2">
+            <input type="checkbox" name="cardiac_disease" id="cardiac-disease" value="Cardiac disease">
+            Cardiac disease
+          </label>
+        </div>
+        <div class="checkbox">
+          <label for="family_history-3">
+            <input type="checkbox" name="diabetes" id="diabetes" value="Diabetes">
+            Diabetes
+          </label>
+        </div>
+        <div class="checkbox">
+          <label for="family_history-4">
+            <input type="checkbox" name="hypertension" id="hypertension" value="Hypertension">
+            Hypertension
+          </label>
+        </div>
+        <div class="checkbox">
+          <label for="family_history-5">
+            <input type="checkbox" name="psychiatric" id="psychiatric" value="Psychiatric disorder">
+            Psychiatric disorder
+          </label>
+        </div>
+        <div class="checkbox">
+          <label for="family_history-6">
+            <input type="checkbox" name="epilepsy" id="epilepsy" value="Epilepsy">
+            Epilepsy
+          </label>
+        </div>
       </div>
     </div>
-  </div>
-</form>
+      <button type="submit" class="btn btn-outline-secondary btn-block">Submit</button>
+    <br>
+  </form>
+</div>
 
 
 
@@ -530,4 +535,4 @@
   </div>
 </div> --}}
 
-</form>
+<script src="./js/patient-history-form.js"></script>
