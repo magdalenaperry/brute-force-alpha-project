@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const withAuth = require('../utils/auth');
 const {
   User,
   Patient,
@@ -8,16 +9,16 @@ const {
 const serialize = require('../utils/serialize')
 // homepage
 router.get('/', async (req, res) => {
-    // include: [User]
+  // include: [User]
 
   // const patients = serialize(patientData)
 
   res.render('all', {
-    
+
   })
 })
 
-router.get('/portal', async (req, res) => {
+router.get('/portal', withAuth, async (req, res) => {
   const patientData = await Patient.findAll({
     // include: [User]
   });
@@ -27,6 +28,10 @@ router.get('/portal', async (req, res) => {
   res.render('patient-portal', {
     patients
   })
+})
+
+router.get('/form', async (req, res) => {
+  res.render('patient-history-form')
 })
 
 // router for /login page and renders 'login.handlebars', will send you to home once logged in! 
