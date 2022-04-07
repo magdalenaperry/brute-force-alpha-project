@@ -1,42 +1,129 @@
-<div class="row justify-space-between-md">
-    <div class="login-card">
-      <h2 class="page-title">Login</h2>
-      <form class="form login-form">
-        <div class="form-group">
-          <label for="email-login">Email:</label>
-          <input class="form-input" type="text" id="email-login" />
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start register">
+
+  <!-- Jumbotron -->
+  <div class="container py-5">
+    <div class="row g-0 align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="card cascading-right" style="
+              background: hsla(0, 0%, 100%, 0.55);
+              backdrop-filter: blur(30px);
+              ">
+          <div class="card-body p-5 shadow-5 text-center">
+            <h2 class="fw-bold mb-5">Sign up now</h2>
+            <form class="signup-form ">
+              <!-- first name & last name -->
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="first-name-signup" class="form-control" />
+                    <label class="form-label" for="first-name-signup">First Name</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="last-name-signup" class="form-control" />
+                    <label class="form-label" for="last-name-signup">Last Name</label>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- username input -->
+              <div class="form-outline mb-4">
+                <input type="text" id="username-signup" class="form-control" />
+                <label class="form-label" for="username-signup">username</label>
+              </div>
+  
+  
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input type="email" id="email-signup" class="form-control" />
+                <label class="form-label" for="email-signup">Email</label>
+              </div>
+  
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <input type="password" id="password-signup" class="form-control" />
+                <label class="form-label" for="password-signup">Password</label>
+              </div>
+   
+              <!-- Submit button -->
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-warning btn-lg btn-block mb-4">
+                  Sign Up
+                </button>
+                <button type="submit" class="login-btn btn btn-warning btn-lg btn-block mb-4">
+                  Login
+                </button>
+              </div>
+  
+            </form>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="password-login">Password:</label>
-          <input class="form-input" type="password" id="password-login" />
-        </div>
-        <div class="form-group">
-          <button class="btn btn-primary" type="submit">login</button>
-        </div>
-      </form>
-    </div>
-    <div class="login-card">
-      <h2 class="page-title">Signup</h2>
-      <form class="form signup-form">
-        <div class="form-group">
-          <label for="username-signup">Username:</label>
-          <input class="form-input" type="text" id="username-signup" />
-        </div>
-        <div class="form-group">
-          <label for="email-signup">Email:</label>
-          <input class="form-input" type="text" id="email-signup" />
-        </div>
-        <div class="form-group">
-          <label for="password-signup">Password:</label>
-          <input class="form-input" type="password" id="password-signup" />
-        </div>
-        <div class="form-group">
-          <button class="btn btn-primary" type="submit">signup</button>
-          {{!-- js is going to have an event handlder --}}
-        </div>
-      </form>
+      </div>
+  
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <img src="https:/via.placeholder.com/500" class="w-100 rounded-4 shadow-4" alt="" />
+      </div>
     </div>
   </div>
-  
+  <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->
+
+
+
+
+
+{{!-- Login!! --}}
+
+<!-- Jumbotron -->
+<section class="text-center text-lg-start login">
+
+<div class="container py-5">
+  <div class="row g-0 align-items-center">
+    <div class="col-lg-6 mb-5 mb-lg-0">
+      <div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);
+            ">
+        <div class="card-body p-5 shadow-5 text-center">
+          <h2 class="fw-bold mb-5">Login</h2>
+          <form>
+
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="email" id="email-login" class="form-control" />
+              <label class="form-label" for="email-login">Email</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <input type="password" id="password-login" class="form-control" />
+              <label class="form-label" for="password-login">Password</label>
+            </div>
+
+            <div class="d-grid gap-2">
+
+            <button type="submit" class="btn btn-warning btn-lg btn-block mb-4">
+              Login
+            </button>
+            <button type="submit" class="sign-up-btn btn btn-warning btn-lg btn-block mb-4">
+              Sign Up
+            </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 mb-5 mb-lg-0">
+      <img src="https:/via.placeholder.com/500" class="w-100 rounded-4 shadow-4" alt="" />
+    </div>
+  </div>
+</div>
+</section>
 
 <script src="./js/login.js"></script>
+<script src="./js/logout.js"></script>
+<script src="./js/index.js"></script>
