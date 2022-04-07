@@ -1,7 +1,4 @@
 const {
-  Reference
-} = require('eslint-scope');
-const {
   Model,
   DataTypes
 } = require('sequelize');
