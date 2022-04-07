@@ -9,12 +9,19 @@ const {
 const serialize = require('../utils/serialize')
 // homepage
 router.get('/', async (req, res) => {
-  // include: [User]
-
-  // const patients = serialize(patientData)
-
-  res.render('homepage')
-})
+  try {
+    // include: [User]
+  
+    // const patients = serialize(patientData)
+  
+    res.render('homepage', {
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 router.get('/portal', withAuth, async (req, res) => {
   const patientData = await Patient.findAll({
