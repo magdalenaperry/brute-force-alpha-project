@@ -1,0 +1,83 @@
+<div class="py-5"></div>
+<div class="card bg-light text-center mb-3 mx-5">
+  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+    <div class="mask"></div>
+    </a>
+  </div>
+  <div class="card-body">
+    <h4 class="text-uppercase"> Your Portal</h4>
+    <p class="card-text"></p>
+  </div>
+</div>
+
+
+{{#each patients}}
+<div class="card bg-light text-center mb-5 mx-5">
+  <div class="bg-image hover-overlay ripple mt-5" data-mdb-ripple-color="light">
+    {{!-- <img src="{{phys_image}}" class="img-fluid" width="200px" /> --}}
+    {{!-- <a href="#!"> --}}
+      <div class="mask"></div>
+    </a>
+  </div>
+
+  <div class="card-body mb-5">
+    <h5 class="card-title fs-4">{{first_name}} {{last_name}}, Portal</h5>
+
+    <p class="mx-5">
+     Email: {{email}}
+    </p>
+     <p class="mx-5">
+      Sex: {{sex}}
+    </p>
+     <p class="mx-5">
+      Age:  {{age}}
+    </p>
+     <p class="mx-5">
+      Race: {{race}}
+    </p> 
+    <p class="mx-5">
+      Street Address: {{street_address}} 
+    </p>
+    
+     <p class="mx-5">
+       {{city}} {{state}} {{zipcode}}
+    </p>
+     
+     <p class="mx-5">
+       Phone Number: {{phone}}
+    </p>
+      {{#if rx}}
+     <p class="mx-5">
+       Prescription(s): {{rx}}
+    </p>
+    {{/if}}
+
+      {{#if dx}}
+     <p class="mx-5">
+      Diagonsis: {{dx}}
+    </p>
+    {{/if}}
+
+      {{#if procedure}}
+     <p class="mx-5">
+       Procedure(s): {{procedure}}
+    </p>
+    {{/if}}
+
+      {{#if insurance_name}}
+     <p class="mx-5">
+       Insurance: {{insurance_name}}
+    </p>
+    {{/if}}
+
+      {{#if allergies}}
+     <p class="mx-5">
+       Allergies: {{allergies}}
+    </p>
+    {{/if}}
+
+
+  </div>
+</div>
+
+{{/each}}
