@@ -26,6 +26,10 @@ const signupFormHandler = async (event) => {
   const username = document.querySelector('#username-signup').value.trim();
   const email = document.querySelector('#email-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
+  
+  if (password < 8){
+    $('#myModal').modal('show')
+  };
 
   if (first_name && last_name && username && email && password) {
     const response = await fetch('/api/users/signup', {
@@ -40,6 +44,8 @@ const signupFormHandler = async (event) => {
       alert('Failed to sign up.');
     }
   }
+
+
 };
 
 // document
