@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const {
   User,
-  Patient, 
+  Patient,
   Physician
 } = require('../models')
 
@@ -19,12 +19,12 @@ router.get('/', async (req, res) => {
   })
 })
 
+// router for /login page and renders 'login.handlebars', will send you to home once logged in! 
 router.get('/login', async (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
   }
-
   res.render('login');
 });
 
@@ -34,16 +34,17 @@ router.get('/about', async (req, res) => {
   const physicianData = await Physician.findAll({
     // include: [User]
   });
-console.log(physicianData);
+  console.log(physicianData);
   const physicians = serialize(physicianData)
-console.log(physicians)
-
-  res.render('about', { physicians });
+  console.log(physicians)
+  res.render('about', {
+    physicians
+  });
 });
 
 
 
-router.get('/portal', async(req, res) => {
+router.get('/portal', async (req, res) => {
   res.render('patient-portal');
 });
 

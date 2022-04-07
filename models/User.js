@@ -40,12 +40,15 @@ User.init({
     validate: {
       len: [8],
     },
-  },
-  is_physician: {
-    type: DataTypes.BOOLEAN,
-    allowNull: false,
-  },
-}, {
+  }
+  // ,
+  // is_physician: {
+  //   type: DataTypes.BOOLEAN,
+  //   allowNull: false,
+  // },
+}, 
+
+{
   hooks: {
     beforeCreate: async (newUserData) => {
       newUserData.password = await bcrypt.hash(newUserData.password, 10);
