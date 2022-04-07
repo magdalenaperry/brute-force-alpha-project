@@ -13,9 +13,7 @@ router.get('/', async (req, res) => {
 
   // const patients = serialize(patientData)
 
-  res.render('all', {
-
-  })
+  res.render('homepage')
 })
 
 router.get('/portal', withAuth, async (req, res) => {
