@@ -6,9 +6,6 @@ DAVID:
 folder; model
 we want to see our patients
 get all information and put it into views
-edit patient-portal.handlebars
-when the patient goes into their portal they able to view their info
-in order to to that
 <!-- create a model for patient(un-comment all that stuff and create the relationships) -->
 
 MAGS
@@ -19,6 +16,11 @@ MAGS
 <!-- with img (url source) -->
 <!-- create view for physcian portal -->
 <!-- populates the physcian info -->
+edit patient-portal.handlebars
+when the patient goes into their portal they able to view their info
+in order to to that
+
+
 
 CALEB
 folder: public
