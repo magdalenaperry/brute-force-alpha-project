@@ -6,15 +6,25 @@ const {
 } = require('../models')
 
 const serialize = require('../utils/serialize')
-
+// homepage
 router.get('/', async (req, res) => {
+    // include: [User]
+
+  // const patients = serialize(patientData)
+
+  res.render('all', {
+    
+  })
+})
+
+router.get('/portal', async (req, res) => {
   const patientData = await Patient.findAll({
     // include: [User]
   });
 
   const patients = serialize(patientData)
 
-  res.render('all', {
+  res.render('patient-portal', {
     patients
   })
 })

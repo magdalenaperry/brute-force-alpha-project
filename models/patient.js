@@ -75,55 +75,14 @@ Patient.init({
   },
   allergies: {
     type: DataTypes.STRING
+  },
+  illness: {
+    type: DataTypes.STRING
+  },
+  history: {
+    type: DataTypes.STRING
   }
-  ,
-  email: {
-    type: DataTypes.STRING,
-    validate: {
-      isEmail: true
-    }
-  },
-  password: {
-    type: DataTypes.TEXT,
-    allowNull: false,
-  },
-  sex: {
-    type: DataTypes.TEXT,
-    allowNull: false,
-  },
-  age: {
-    type: DataTypes.INTEGER,
-  },
-  race: {
-    type: DataTypes.TEXT,
-  },
-  street_address: {
-    type: DataTypes.TEXT,
-  },
-  city: {
-    type: DataTypes.TEXT,
-  },
-  state: {
-    type: DataTypes.TEXT,
-  },
-  zipcode: {
-    type: DataTypes.INTEGER,
-  },
-  phone: {
-    type: DataTypes.STRING,
-  },
-  rx: {
-    type: DataTypes.TEXT,
-  },
-  dx: {
-    type: DataTypes.TEXT,
-  },
-  procedure: {
-    type: DataTypes.TEXT,
-  },
-  insurance_name: {
-    type: DataTypes.TEXT
-  }
+
   // ,
   // history_id: {
   //   type: DataTypes.TEXT,

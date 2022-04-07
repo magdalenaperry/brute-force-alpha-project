@@ -16,11 +16,13 @@ const patientData = [
     state: "NC",
     zipcode: "28220",
     phone: "(704)752-6617",
-    rx: "null",
-    dx: "null",
-    procedure: "null",
-    insurance_name: "null",
-    allergies: " null"
+    rx: null,
+    dx: null,
+    procedure: null,
+    insurance_name: "BCBS",
+    allergies:  "Penecillin",
+    illness: "Broken femnur",
+    history: "Diabetes"
   },
   {
     first_name: "Aluino",
@@ -35,11 +37,11 @@ const patientData = [
     state: "NC",
     zipcode: "27409",
     phone: "(336)341-6973",
-    rx: "null",
-    dx: "null",
-    procedure: "null",
-    insurance_name: "null",
-    allergies: " null"
+    rx: null,
+    dx: null,
+    procedure: null,
+    insurance_name: "Cigna Health",
+    allergies:  null
   },
   {
     first_name: "Elvyn",
@@ -54,11 +56,11 @@ const patientData = [
     state: "NC",
     zipcode: "27610",
     phone: "(919)341-7478",
-    rx: "null",
-    dx: "null",
-    procedure: "null",
-    insurance_name: "null",
-    allergies: " null"
+    rx: null,
+    dx: null,
+    procedure: null,
+    insurance_name: null,
+    allergies: "Fruits"
   },
   {
     first_name: "Claudelle",
@@ -75,9 +77,9 @@ const patientData = [
     phone: "(704)548-9825",
     rx: "Divalproex Sodium",
     dx: "Unspecified sprain of right index finger, initial encounter",
-    procedure: "null",
-    insurance_name: "null",
-    allergies: " null"
+    procedure: null,
+    insurance_name: null,
+    allergies:  null
   },
   {
     first_name: "Yvette",
@@ -95,8 +97,8 @@ const patientData = [
     rx: "Pentoxifylline",
     dx: "Foreign body in conjunctival sac, left eye, subs encntr",
     procedure: "Fragmentation in Pericardial Cavity, External Approach",
-    insurance_name: "null",
-    allergies: " null"
+    insurance_name: null,
+    allergies:  null
   },
   {
     first_name: "Gerard",
@@ -115,7 +117,7 @@ const patientData = [
     dx: "Scombroid fish poisoning, assault, subsequent encounter",
     procedure: null,
     Insurance: null,
-    allergies: null
+    allergies: "Fish"
   },
   {
     first_name: "Maxy",
@@ -133,7 +135,7 @@ const patientData = [
     rx: "Venlafaxine Hydrochloride",
     dx: "Strain musc/tend ant grp at low leg level, left leg, subs",
     procedure: null,
-    Insurance: null,
+    Insurance: "United Health Care",
     allergies: null
   },
   {
@@ -171,7 +173,7 @@ const patientData = [
     rx: "LMX5",
     dx: "Lac w/o fb of left lesser toe(s) w damage to nail, init",
     procedure: null,
-    Insurance: null,
+    Insurance: "BCBS",
     allergies: null
   },
   {
