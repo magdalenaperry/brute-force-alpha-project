@@ -20,31 +20,49 @@ const loginFormHandler = async (event) => {
 };
 
 const signupFormHandler = async (event) => {
-  event.preventDefault();
-  const first_name = document.querySelector('#first-name-signup').value.trim();
-  const last_name = document.querySelector('#last-name-signup').value.trim();
-  const username = document.querySelector('#username-signup').value.trim();
-  const email = document.querySelector('#email-signup').value.trim();
-  const password = document.querySelector('#password-signup').value.trim();
-  
-  
+  try {
 
-  if (first_name && last_name && username && email && password) {
-    const response = await fetch('/api/users/signup', {
-      method: 'POST',
-      body: JSON.stringify({ username, email, password, first_name, last_name }),
-      headers: { 'Content-Type': 'application/json' },
-    });
 
-    if (response.ok) {
-      document.location.replace('/');
-    } else {
-      alert('Failed to sign up.');
+    event.preventDefault();
+    const first_name = document.querySelector('#first-name-signup').value.trim();
+    const last_name = document.querySelector('#last-name-signup').value.trim();
+    const username = document.querySelector('#username-signup').value.trim();
+    const email = document.querySelector('#email-signup').value.trim();
+    const password = document.querySelector('#password-signup').value.trim();
+    const passwordAlert = document.querySelector('.passwordAlert');
+    const generalAlert = document.querySelector('.generalAlert');
+
+
+    if (first_name && last_name && username && email && password) {
+      const response = await fetch('/api/users/signup', {
+        method: 'POST',
+        body: JSON.stringify({ username, email, password, first_name, last_name }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+    
+      console.log(response.statusText)
+
+      if (response.ok) {
+        document.location.replace('/');
+      } else if (password.length < 8) {
+        passwordAlert.style.display = 'block';
+      } else if (response.status === 500) {
+        generalAlert.style.display = 'block';
+      }
     }
+  } catch (err) {
+      console.log(err);
   }
+}
 
+const closeBtn = document.querySelector('.close');
 
+const closeAlert = function () {
+  $(".alert").alert('close')
 };
+
+closeBtn.addEventListener('click', closeAlert)
+
 
 // document
 //   .querySelector('.login-form')
@@ -52,5 +70,5 @@ const signupFormHandler = async (event) => {
 
 document
   .querySelector('.signup-form')
-  .addEventListener('submit', 
-  signupFormHandler);
+  .addEventListener('submit',
+    signupFormHandler);
