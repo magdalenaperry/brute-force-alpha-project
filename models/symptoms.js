@@ -21,7 +21,7 @@ Symptoms.init({
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'symptoms',
 });
 
 module.exports = Symptoms
