@@ -36,17 +36,12 @@
     <p class="card-text fs-5 ">{{university}}</p>
     {{!-- <a href="mailto:{{email}}" class="text-secondary">{{email}}</a> --}}
 
-<div class="pt-3">
-    <button type="button" class="btn btn-warning">Schedule an Appointment
-      <!-- Calendly link widget begin -->
-      <link href="{{cal_one}}" rel="stylesheet">
-      <script src="{{cal_two}}" type="text/javascript" async></script>
-      <a href="" onclick='Calendly.initPopupWidget({url: "{{cal_three}}"});return false;'></a>
-      <!-- Calendly link widget end -->
-    </button>
-
-
-</div>
+    {{!-- Calendly --}}
+    <link href="{{cal_one}}" rel="stylesheet">
+    <script src="{{cal_two}}" type="text/javascript" async></script>
+    <a href="" onclick="Calendly.initPopupWidget({url: '{{cal_three}}'});return false;">
+      <button type="button" class="btn btn-warning">Schedule an Appointment</button>
+    </a>
   </div>
 </div>
 
