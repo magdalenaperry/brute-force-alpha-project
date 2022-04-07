@@ -6,8 +6,7 @@ DAVID:
 folder; model
 we want to see our patients
 get all information and put it into views
-create a new viewport
-(view_portal)
+edit patient-portal.handlebars
 when the patient goes into their portal they able to view their info
 in order to do that
 create a model for patient(un-comment all that stuff and create the relationships)

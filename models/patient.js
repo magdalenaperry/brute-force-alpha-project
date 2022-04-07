@@ -5,7 +5,11 @@ const {
 } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Patient extends Model {}
+const history = require('./history')
+const drugs = require('./drugs')
+const symptoms = require('./symptoms')
+
+class Patient extends Model { }
 
 Patient.init({
   id: {
@@ -22,95 +26,75 @@ Patient.init({
     type: DataTypes.STRING,
     allowNull: false,
   }
-  // ,
-  // email: {
-  //   type: DataTypes.STRING,
-  //   validate: {
-  //     isEmail: true
-  //   }
-  // },
-  // password: {
-  //   type: DataTypes.TEXT,
-  //   allowNull: false,
-  // },
-  // sex: {
-  //   type: DataTypes.TEXT,
-  //   allowNull: false,
-  // },
-  // age: {
-  //   type: DataTypes.INTEGER,
-  // },
-  // race: {
-  //   type: DataTypes.TEXT,
-  // },
-  // street_address: {
-  //   type: DataTypes.TEXT,
-  // },
-  // city: {
-  //   type: DataTypes.TEXT,
-  // },
-  // state: {
-  //   type: DataTypes.TEXT,
-  // },
-  // zipcode: {
-  //   type: DataTypes.INTEGER,
-  // },
-  // phone: {
-  //   type: DataTypes.INTEGER,
-  // },
-  // rx: {
-  //   type: DataTypes.TEXT,
-  // },
-  // dx: {
-  //   type: DataTypes.TEXT,
-  // },
-  // procedure: {
-  //   type: DataTypes.TEXT,
-  // },
-  // insurance_name: {
-  //   type: DataTypes.TEXT
-  // },
-  // history_id: {
-  //   type: DataTypes.TEXT,
-  //   references: {
-  //     model: 'history',
-  //     key: 'id'
-  //   }
-  // }
-
-
-
-
-
-  // , 
-  // rec_drug: {
-  //   type: DataTypes.TEXT,
-  //     // references: {
-  //     //   model: 'rec_drug',
-  //     //   key: ''
-  //     // }
-  // }, 
-  // alcohol_consumption: {
-  //   type: DataTypes.TEXT,
-  //     // references: {
-  //     //   model: 'alcohol_consumption',
-  //     //   key: ''
-  //     // }
-  // }, 
-  // tobacco_use: {
-  //   type: DataTypes.TEXT,
-  //   // references: {
-  //   //   model: 'tobacco_use',
-  //   //   key: ''
-  //   // }
-  // },
-  // primary_symptoms: {
-  //   type: DataTypes.TEXT, 
-  //   // references: {
-  //   //   model: 'primary_symptoms',
-  //   //   id: ''
-  //   // }
-  // } 
+  ,
+  email: {
+    type: DataTypes.STRING,
+    validate: {
+      isEmail: true
+    }
+  },
+  password: {
+    type: DataTypes.TEXT,
+    allowNull: false,
+  },
+  sex: {
+    type: DataTypes.TEXT,
+    allowNull: false,
+  },
+  age: {
+    type: DataTypes.INTEGER,
+  },
+  race: {
+    type: DataTypes.TEXT,
+  },
+  street_address: {
+    type: DataTypes.TEXT,
+  },
+  city: {
+    type: DataTypes.TEXT,
+  },
+  state: {
+    type: DataTypes.TEXT,
+  },
+  zipcode: {
+    type: DataTypes.INTEGER,
+  },
+  phone: {
+    type: DataTypes.INTEGER,
+  },
+  rx: {
+    type: DataTypes.TEXT,
+  },
+  dx: {
+    type: DataTypes.TEXT,
+  },
+  procedure: {
+    type: DataTypes.TEXT,
+  },
+  insurance_name: {
+    type: DataTypes.TEXT
+  },
+  history_id: {
+    type: DataTypes.TEXT,
+    references: {
+      model: 'history',
+      key: 'id'
+    }
+  },
+  rec_drug: {
+    type: DataTypes.TEXT,
+    references: {
+      model: 'drugs',
+      key: 'id'
+    }
+  },
+  primary_symptoms: {
+    type: DataTypes.TEXT,
+    references: {
+      model: 'symptoms',
+      key: 'id',
+    }
+  }
 }, {
   sequelize,
   timestamps: false,
