@@ -22,7 +22,8 @@ const patientData = [
     insurance_name: "BCBS",
     allergies:  "Penecillin",
     illness: "Broken femnur",
-    history: "Diabetes"
+    history: "Diabetes", 
+    profile_img: "https://gravatar.com/avatar/86e910b84e0d541bac14c0373e1aed4a?s=400&d=robohash&r=x"
   },
   {
     first_name: "Aluino",
@@ -41,7 +42,8 @@ const patientData = [
     dx: null,
     procedure: null,
     insurance_name: "Cigna Health",
-    allergies:  null
+    allergies:  null, 
+    profile_img: "https://gravatar.com/avatar/38d435f36972de129ae466e4a117451c?s=400&d=robohash&r=x"
   },
   {
     first_name: "Elvyn",
@@ -60,7 +62,8 @@ const patientData = [
     dx: null,
     procedure: null,
     insurance_name: null,
-    allergies: "Fruits"
+    allergies: "Fruits", 
+    profile_img: "https://gravatar.com/avatar/7ec9c322d1fd88228b6a70c5da627ec4?s=400&d=robohash&r=x"
   },
   {
     first_name: "Claudelle",
@@ -79,7 +82,8 @@ const patientData = [
     dx: "Unspecified sprain of right index finger, initial encounter",
     procedure: null,
     insurance_name: null,
-    allergies:  null
+    allergies:  null,
+    profile_img: "https://gravatar.com/avatar/796b82c79102a836e4d2be22ae9c4bd0?s=400&d=robohash&r=x"
   },
   {
     first_name: "Yvette",
@@ -98,7 +102,8 @@ const patientData = [
     dx: "Foreign body in conjunctival sac, left eye, subs encntr",
     procedure: "Fragmentation in Pericardial Cavity, External Approach",
     insurance_name: null,
-    allergies:  null
+    allergies:  null,
+    profile_img: "https://gravatar.com/avatar/7020114bca9e465af6f800ca79c51746?s=400&d=robohash&r=x"
   },
   {
     first_name: "Gerard",
@@ -117,7 +122,8 @@ const patientData = [
     dx: "Scombroid fish poisoning, assault, subsequent encounter",
     procedure: null,
     Insurance: null,
-    allergies: "Fish"
+    allergies: "Fish", 
+    profile_img: "https://gravatar.com/avatar/b8eb7a4a698b15aa111b4c9b52dec160?s=400&d=robohash&r=x"
   },
   {
     first_name: "Maxy",
@@ -136,7 +142,8 @@ const patientData = [
     dx: "Strain musc/tend ant grp at low leg level, left leg, subs",
     procedure: null,
     Insurance: "United Health Care",
-    allergies: null
+    allergies: null, 
+    profile_img: "https://gravatar.com/avatar/98dd97ef9b4526dd8ff336d45e423389?s=400&d=robohash&r=x"
   },
   {
     first_name: "Arnie",
@@ -155,7 +162,8 @@ const patientData = [
     dx: null,
     procedure: null,
     Insurance: null,
-    allergies: null
+    allergies: null, 
+    profile_img: "https://gravatar.com/avatar/f359b069f8736f897541a42563abdf67?s=400&d=robohash&r=x"
   },
   {
     first_name: "Ralph",
@@ -174,7 +182,8 @@ const patientData = [
     dx: "Lac w/o fb of left lesser toe(s) w damage to nail, init",
     procedure: null,
     Insurance: "BCBS",
-    allergies: null
+    allergies: null,
+    profile_img: "https://gravatar.com/avatar/bebfa8c55dd6439dc08ee372a732b296?s=400&d=robohash&r=x"
   },
   {
     first_name: "Elia",
@@ -193,7 +202,8 @@ const patientData = [
     dx: null,
     procedure: null,
     Insurance: null,
-    allergies: null
+    allergies: null, 
+    profile_img: "https://gravatar.com/avatar/9754211fabc12d05894544d2dabfe380?s=400&d=robohash&r=x"
   }
 ]
 

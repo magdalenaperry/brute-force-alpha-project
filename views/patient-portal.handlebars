@@ -20,61 +20,64 @@
     </a>
   </div>
 
+<div class="card bg-light text-center mb-5 mx-5">
+  <div class="bg-image hover-overlay ripple mt-5" data-mdb-ripple-color="light">
+    <img src="{{profile_img}}" class="img-fluid" width="200px" />
+    <div class="mask"></div>
+    </a>
+  </div>
+
+
   <div class="card-body mb-5">
-    <h5 class="card-title fs-4">{{first_name}} {{last_name}}, Portal</h5>
+      <h5 class="card-title fs-4"> {{first_name}} {{last_name}} </h5>
+    <div class="card-body">
+    <p class="mx-5"><strong>Email:</strong> {{email}}</p>
+    <p class="mx-5"><strong>Sex:</strong> {{sex}}</p>
+    <p class="mx-5"><strong>Age:</strong> {{age}}</p>
+    <p class="mx-5"><strong>Race:</strong> {{race}}</p>
+    <p class="mx-5">
+      Street Address: {{street_address}}
+    </p>
 
     <p class="mx-5">
-     Email: {{email}}
+      {{city}} {{state}} {{zipcode}}
     </p>
-     <p class="mx-5">
-      Sex: {{sex}}
-    </p>
-     <p class="mx-5">
-      Age:  {{age}}
-    </p>
-     <p class="mx-5">
-      Race: {{race}}
-    </p> 
+
     <p class="mx-5">
-      Street Address: {{street_address}} 
+      Phone Number: {{phone}}
     </p>
-    
-     <p class="mx-5">
-       {{city}} {{state}} {{zipcode}}
-    </p>
-     
-     <p class="mx-5">
-       Phone Number: {{phone}}
-    </p>
-      {{#if rx}}
-     <p class="mx-5">
-       Prescription(s): {{rx}}
+
+    {{#if rx}}
+    <p class="mx-5">
+      Prescription(s): {{rx}}
     </p>
     {{/if}}
 
-      {{#if dx}}
-     <p class="mx-5">
+    {{#if dx}}
+    <p class="mx-5">
       Diagonsis: {{dx}}
     </p>
     {{/if}}
 
-      {{#if procedure}}
-     <p class="mx-5">
-       Procedure(s): {{procedure}}
+    {{#if procedure}}
+    <p class="mx-5">
+      Procedure(s): {{procedure}}
     </p>
     {{/if}}
 
-      {{#if insurance_name}}
-     <p class="mx-5">
-       Insurance: {{insurance_name}}
+    {{#if insurance_name}}
+    <p class="mx-5">
+      Insurance: {{insurance_name}}
     </p>
     {{/if}}
 
-      {{#if allergies}}
-     <p class="mx-5">
-       Allergies: {{allergies}}
+    {{#if allergies}}
+    <p class="mx-5">
+      Allergies: {{allergies}}
     </p>
     {{/if}}
+
+    </div >
 
 
   </div>
