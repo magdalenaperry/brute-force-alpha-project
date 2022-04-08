@@ -19,7 +19,7 @@ const physicianData = [{
   npi: "9189423704",
   specialty: "Orthopedics",
   university: "Baylor Medical School",
-  phys_image: "https://gravatar.com/avatar/a83b087c4d1b21adfbcd285b552f428a?s=400&d=robohash&r=x",
+  phys_image: "https://gravatar.com/avatar/8c6301964bdb5a01dd420bf8f5be51d8?s=400&d=robohash&r=x",
   phys_bio: "Quia consequatur, neque nostrum molestias incidunt odit velit. Ea necessitatibus fuga illo dolorum, beatae aliquam corporis obcaecati excepturi soluta facere quae, totam consectetur quisquam sunt, unde iure laborum? Quae, id dolor. Iusto nostrum explicabo provident numquam eum, eveniet quia, commodi vero, enim eos quod consequuntur repellat error veniam quos debitis non vel. Laudantium dolor dignissimos eius itaque.",
   cal_three: "https://calendly.com/helenalempke?hide_landing_page_details=1&hide_gdpr_banner=1"
 
@@ -64,7 +64,7 @@ const physicianData = [{
   npi: "7456511799",
   specialty: "Family Medicine",
   university: "Eastern Virginia Medical School",
-  phys_image: "https://gravatar.com/avatar/8c6301964bdb5a01dd420bf8f5be51d8?s=400&d=robohash&r=x",
+  phys_image: "https://gravatar.com/avatar/a83b087c4d1b21adfbcd285b552f428a?s=400&d=robohash&r=x",
   phys_bio: "Quia consequatur, neque nostrum molestias incidunt odit velit. Ea necessitatibus fuga illo dolorum, beatae aliquam corporis obcaecati excepturi soluta facere quae, totam consectetur quisquam sunt, unde iure laborum? Quae, id dolor. Iusto nostrum explicabo provident numquam eum, eveniet quia, commodi vero, enim eos quod consequuntur repellat error veniam quos debitis non vel. Laudantium dolor dignissimos eius itaque.",
   cal_three: "https://calendly.com/nancyperrymd?hide_landing_page_details=1&hide_gdpr_banner=1"
 
