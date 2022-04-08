@@ -1,10 +1,10 @@
 # Chiron Private Practice
  ## Table of contents
   1. [Description](#Description)
-  1. [Installation](#Installation)
-  1. [User Story](#Story)
-  1. [Heroku](#Heroku)
-  1. [GitHub](#GitHub)
+  2. [Installation](#Installation)
+  3. [User Story](#Story)
+  4. [Heroku](#Heroku)
+  5. [GitHub](#GitHub)
 
 
 
