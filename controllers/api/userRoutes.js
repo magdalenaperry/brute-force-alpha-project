@@ -5,7 +5,7 @@ const Patient = require('../../models/patient')
 
 router.post('/', async (req, res) => {
   try {
-    const userData = await User.create(req.body);
+    const userData = await Patient.create(req.body);
 
     req.session.save(() => {
       req.session.user_id = userData.id;
@@ -24,7 +24,7 @@ router.post('/', async (req, res) => {
 // User LOGIN
 router.post('/login', async (req, res) => {
   try {
-    const dbUserData = await User.findOne({
+    const dbUserData = await Patient.findOne({
       where: {
         email: req.body.email,
       },
@@ -86,7 +86,6 @@ router.post('/signup', async (req, res) => {
       req.session.user_id = dbUserData.id;
 
       res.status(200).json(dbUserData);
-      console.log('yay')
     });
   } catch (err) {
     console.log(err);
