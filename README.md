@@ -1,10 +1,15 @@
 # Chiron Private Practice
  ## Table of contents
+ 
   1. [Description](#Description)
   2. [Installation](#Installation)
   3. [User Story](#Story)
   4. [Heroku](#Heroku)
   5. [GitHub](#GitHub)
+  5. [Creators](#Creators)
+  
+
+
 
 
 
@@ -45,4 +50,15 @@ SO THAT I can view all physicians and view my information and make an appointmen
 [Chiron Respository Link ](https://github.com/magdalenaperry/brute-force-alpha-project)
 
 
+## Creators
 
+[Michael Hoyle ](https://www.linkedin.com/in/michael-hoyle-523143226/)
+
+
+[Magdalena Perry ](https://www.linkedin.com/in/magdalena-perry/)
+
+
+[Jasmin Bouasavatdy ](https://www.linkedin.com/in/jasmin-bouasavatdy-0a9559227/)
+
+
+[David Aylward](https://www.linkedin.com/in/david-aylward-0a3819230/)
