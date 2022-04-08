@@ -7,6 +7,8 @@ const {
 } = require('../models')
 
 const serialize = require('../utils/serialize')
+
+
 // homepage
 router.get('/', async (req, res) => {
   try {
@@ -54,9 +56,9 @@ router.get('/about', async (req, res) => {
   const physicianData = await Physician.findAll({
     // include: [User]
   });
-  console.log(physicianData);
+  // console.log(physicianData);
   const physicians = serialize(physicianData)
-  console.log(physicians)
+  // console.log(physicians);
   res.render('about', {
     physicians
   });
