@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
 const {
-  User,
   Patient,
   Physician
 } = require('../models')
@@ -32,6 +31,7 @@ router.get('/portal', withAuth, async (req, res) => {
   const patients = [serialize(patientData)]
   console.log(patients)
   res.render('patient-portal', {
+    loggedIn: req.session.loggedIn,
     patients
   })
 })
@@ -66,6 +66,7 @@ router.get('/about', async (req, res) => {
     const physicians = serialize(physicianData)
     // console.log(physicians)
     res.render('about', {
+      loggedIn: req.session.loggedIn,
       physicians
     });
   }
