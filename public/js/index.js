@@ -13,7 +13,6 @@ const showQuestions = function () {
 }
 
 
-
 const signupHandler = function (event) {
   event.preventDefault();
   login.style.display = 'none';
