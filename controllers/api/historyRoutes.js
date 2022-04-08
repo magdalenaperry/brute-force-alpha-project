@@ -1,11 +1,6 @@
 const router = require('express').Router();
 const { Illness } = require('../../models');
 
-// patient history create
-// CREATE NEW PATIENT HISTORY
-// http://localhost:3001/api/history/forms
-// ROUTE SUCCESSFUL
-
 router.post('/forms', async (req, res) => {
   try {
     const historyData = await Illness.create({

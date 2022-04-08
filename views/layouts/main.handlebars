@@ -21,7 +21,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
       <!--  Show this only on mobile to medium screens  -->
-      <a class="navbar-brand d-lg-none fs-1 ms-4 text-uppercase" href="#">Chiron</a>
+      <a class="navbar-brand d-lg-none fs-1 ms-4 text-uppercase" id="chiron" href="/">Chiron</a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle"
         aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +44,7 @@
         </ul>
 
         <!--   Show this only lg screens and up   -->
-        <a class="navbar-brand d-none d-lg-block fs-1 text-uppercase" href="#">Chiron</a>
+        <a class="navbar-brand d-none d-lg-block fs-1 text-uppercase" id="chiron" href="/">Chiron</a>
 
         <ul class="navbar-nav fs-5">
           <li class="nav-item">
@@ -52,12 +52,12 @@
           </li>
           <li class="nav-item">
             {{#if loggedIn}}
-            <button id="logout" class="mx-5 btn btn-warning ml-auto mr-2 btn-lg">Logout</button>
+            <button id="logout" class="mx-3 btn btn-warning ml-auto mr-2 btn-lg">Logout</button>
             {{else}}
             <a class="nav-link ms-4" href="/login">Login</a>
             {{/if}}
           </li>
-          <a href="/portal"><button class="mx-5 btn btn-info ml-auto mr-2 btn-lg">Portal</button></a>
+          <a href="/portal"><button class="mx-3 btn btn-info ml-auto mr-2 btn-lg">Portal</button></a>
           <!-- <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li> -->
