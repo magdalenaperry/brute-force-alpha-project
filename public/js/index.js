@@ -5,11 +5,18 @@ const login = document.querySelector('.login');
 const moreQuestions = document.querySelector('#moreQuestions');
 const secondaryQuestions = document.querySelector('#secondaryQuestions');
 const submitBtn = document.querySelector('#signupBtn');
+const originalQuestions = document.querySelector('#ogQuestions');
+const signupTxt = document.querySelector('#signupText');
+const loginImg = document.querySelector('#loginImg');
+
 
 const showQuestions = function () {
   secondaryQuestions.style.display = 'block';
   submitBtn.style.display = 'block'
   moreQuestions.style.display = 'none';
+  originalQuestions.style.display = 'none';
+  signupTxt.innerHTML = 'We need additional information to create your account.';
+  loginImg.style.display = 'none';
 }
 
 

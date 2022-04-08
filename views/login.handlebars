@@ -17,48 +17,50 @@
 
   <!-- Jumbotron -->
   <div class="container py-5">
-    <div class="row g-0 align-items-center">
-      <div class="col-lg-6 mb-5 mb-lg-0">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-9">
         <div class="card cascading-right" style="
               background: hsla(0, 0%, 100%, 0.55);
               backdrop-filter: blur(30px);
               ">
           <div class="card-body p-5 shadow-5 text-center">
-            <h2 class="fw-bold mb-5">Sign up now</h2>
+            <h2 class="fw-bold mb-5" id="signupText">Sign up now</h2>
             <form class="signup-form ">
               <!-- first name & last name -->
-              <div class="row">
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <input type="text" id="first_name-signup" class="form-control" />
-                    <label class="form-label" for="first_name-signup">First Name</label>
+              <div id="ogQuestions">
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="first_name-signup" class="form-control" />
+                      <label class="form-label" for="first_name-signup">First Name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="last_name-signup" class="form-control" />
+                      <label class="form-label" for="last_name-signup">Last Name</label>
+                    </div>
                   </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <input type="text" id="last_name-signup" class="form-control" />
-                    <label class="form-label" for="last_name-signup">Last Name</label>
-                  </div>
+
+                <!-- username input -->
+                <div class="form-outline mb-4">
+                  <input type="text" id="username-signup" class="form-control" />
+                  <label class="form-label" for="username-signup">username</label>
                 </div>
-              </div>
-
-              <!-- username input -->
-              <div class="form-outline mb-4">
-                <input type="text" id="username-signup" class="form-control" />
-                <label class="form-label" for="username-signup">username</label>
-              </div>
 
 
-              <!-- Email input -->
-              <div class="form-outline mb-4">
-                <input type="email" id="email-signup" class="form-control" />
-                <label class="form-label" for="email-signup">Email</label>
-              </div>
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="email-signup" class="form-control" />
+                  <label class="form-label" for="email-signup">Email</label>
+                </div>
 
-              <!-- Password input -->
-              <div class="form-outline mb-4">
-                <input type="password" id="password-signup" class="form-control" />
-                <label class="form-label" for="password-signup">Password</label>
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <input type="password" id="password-signup" class="form-control" />
+                  <label class="form-label" for="password-signup">Password</label>
+                </div>
               </div>
               <div id="secondaryQuestions">
                 <div class="form-outline mb-4">
@@ -153,7 +155,7 @@
       </div>
 
       <div class="col-lg-6 mb-5 mb-lg-0">
-        <img src="https:/via.placeholder.com/500" class="w-100 rounded-4 shadow-4" alt="" />
+        <img id='loginImg' src="https:/via.placeholder.com/500" class="w-100 rounded-4 shadow-4" alt="" />
       </div>
     </div>
   </div>
