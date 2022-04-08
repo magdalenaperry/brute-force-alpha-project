@@ -5,22 +5,11 @@ const {
   Physician
 } = require('../models')
 
-<<<<<<< HEAD
-const serialize = require('../utils/serialize')
-
-
-=======
 const serialize = require('../utils/serialize');
 const { default: axios } = require('axios');
->>>>>>> main
-// homepage
+
 router.get('/', async (req, res) => {
   try {
-    // include: [User]
-
-    // const patients = serialize(patientData)
-    console.log('hello world')
-
     res.render('homepage', {
       loggedIn: req.session.loggedIn,
     });
@@ -32,7 +21,6 @@ router.get('/', async (req, res) => {
 
 router.get('/portal', withAuth, async (req, res) => {
   const patientData = await Patient.findByPk(req.session.user_id);
-  console.log('hello')
 
   const patients = [serialize(patientData)]
   console.log(patients)
@@ -46,7 +34,6 @@ router.get('/form', async (req, res) => {
   res.render('patient-history-form')
 })
 
-// router for /login page and renders 'login.handlebars', will send you to home once logged in! 
 router.get('/login', async (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
@@ -58,17 +45,6 @@ router.get('/login', async (req, res) => {
 
 // SUCCESSFUL!
 router.get('/about', async (req, res) => {
-<<<<<<< HEAD
-  const physicianData = await Physician.findAll({
-    // include: [User]
-  });
-  // console.log(physicianData);
-  const physicians = serialize(physicianData)
-  // console.log(physicians);
-  res.render('about', {
-    physicians
-  });
-=======
   try {
     const { data } = await axios.get("https://api.calendly.com/users/me", {
       headers: {
@@ -77,11 +53,8 @@ router.get('/about', async (req, res) => {
     })
     console.log(data);
     const physicianData = await Physician.findAll({
-      // include: [User]
     });
-    // console.log(physicianData);
     const physicians = serialize(physicianData)
-    // console.log(physicians)
     res.render('about', {
       loggedIn: req.session.loggedIn,
       physicians
@@ -92,13 +65,6 @@ router.get('/about', async (req, res) => {
     res.json(err)
   }
 
->>>>>>> main
-});
-
-
-
-router.get('/portal', async (req, res) => {
-  res.render('patient-portal');
 });
 
 module.exports = router;
