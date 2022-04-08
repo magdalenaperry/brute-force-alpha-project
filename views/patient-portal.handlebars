@@ -4,15 +4,15 @@
     <div class="mask"></div>
     </a>
   </div>
-  <div class="card-body">
-    <h4 class="text-uppercase"> Your Portal</h4>
+  <div class="card-body py-5">
+    <h4 class="text-uppercase fs-1 fw-light letter-spacing"> Welcome to <strong class="text-info">ChironPortal</strong> </h4>
     <p class="card-text"></p>
   </div>
 </div>
 
 
 {{#each patients}}
-<div class="card bg-light text-center mb-5 mx-5">
+<div class="card bg-light mb-5 mx-5">
   <div class="bg-image hover-overlay ripple mt-5" data-mdb-ripple-color="light">
     {{!-- <img src="{{phys_image}}" class="img-fluid" width="200px" /> --}}
     {{!-- <a href="#!"> --}}
@@ -20,70 +20,90 @@
     </a>
   </div>
 
-  <div class="card bg-light text-center mb-5 mx-5">
-    <div class="bg-image hover-overlay ripple mt-5" data-mdb-ripple-color="light">
-      <img src="{{profile_img}}" class="img-fluid" width="200px" />
-      <div class="mask"></div>
-      </a>
-    </div>
 
 
-    <div class="card-body mb-5">
-      <h5 class="card-title fs-4"> {{first_name}} {{last_name}} </h5>
-      <div class="card-body">
-        <p class="mx-5"><strong>Email:</strong> {{email}}</p>
-        <p class="mx-5"><strong>Sex:</strong> {{sex}}</p>
-        <p class="mx-5"><strong>Age:</strong> {{age}}</p>
-        <p class="mx-5"><strong>Race:</strong> {{race}}</p>
-        <p class="mx-5">
-          Street Address: {{street_address}}
-        </p>
 
-        <p class="mx-5">
-          {{city}} {{state}} {{zipcode}}
-        </p>
 
-        <p class="mx-5">
-          Phone Number: {{phone}}
-        </p>
 
-        {{#if rx}}
-        <p class="mx-5">
-          Prescription(s): {{rx}}
-        </p>
-        {{/if}}
+  <div class="container-fluid fs-5">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="text-center border border-secondary mb-4">
+              <img alt="patient-profile-pic" src="{{profile_img}}" width="350" />
+              <h3 class="fs-4 mt-3 mb-4 text-secondary text-uppercase fw-light">
+                {{first_name}} {{last_name}}
 
-        {{#if dx}}
-        <p class="mx-5">
-          Diagonsis: {{dx}}
-        </p>
-        {{/if}}
+              </h3>
+            </div>
+          
+            <address class="m-auto mb-5 mb-1 ms-3">
+              <strong>Home Address:</strong><br>
+              {{street_address}}<br>
+              {{city}}, {{state}} {{zipcode}} <br>
 
-        {{#if procedure}}
-        <p class="mx-5">
-          Procedure(s): {{procedure}}
-        </p>
-        {{/if}}
+              <strong>tel: </strong><a class="text-decoration-none text-secondary" href="tel:{{phone}}">{{phone}}</a><br>
+              <strong>email: </strong><a class="text-decoration-none text-secondary"
+                href="mailto:{{email}}">{{email}}</a>
+            </address>
+          </div>
 
-        {{#if insurance_name}}
-        <p class="mx-5">
-          Insurance: {{insurance_name}}
-        </p>
-        {{/if}}
 
-        {{#if allergies}}
-        <p class="mx-5">
-          Allergies: {{allergies}}
-        </p>
-        {{/if}}
+          <div class="col-md-7 mb-5">
+            <dl class="ms-md-5 ms-3">
 
-        <a href="/about">
-          <button class="mx-3 btn btn-info ml-auto mr-2 btn-lg">Schedule an Appointment</button>
-        </a>
+              <dd class="fs-4">
+                {{age}} {{sex}}, {{race}}
+              </dd>
+              <dt>
+                Height:
+              </dt>
+              <dd>
+                5'1
+              </dd>
+              <dt>
+                Weight:
+              </dt>
+              <dd>
+                92 lbs
+              </dd>
 
+              {{#if rx}}
+              <dt>Prescription(s):</dt>
+              <dd>{{rx}}</dd>
+              {{/if}}
+
+              {{#if dx}}
+              <dt>Previous Diagnosis:</dt>
+              <dd>{{dx}}</dd>
+              {{/if}}
+
+              {{#if procedure}}
+              <dt>Previous Procedures:</dt>
+              <dd>{{procedure}}</dd>
+              {{/if}}
+
+              {{#if allergies}}
+              <dt>Known Allergies:</dt>
+              <dd>{{allergies}}</dd>
+              {{/if}}
+
+              {{#if insurance_name}}
+              <dt>Insurance Provider:</dt>
+              <dd>{{insurance_name}}</dd>
+              {{/if}}
+
+              <a href="/about">
+                <button class=" btn btn-info ml-auto mr-2 btn-lg my-5">Schedule an Appointment</button>
+              </a>
+
+            </dl>
+
+
+          </div>
+        </div>
       </div>
-
-
     </div>
   </div>
 

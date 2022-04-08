@@ -8,6 +8,10 @@
     }
   }  */
 
+.letter-spacing{
+  letter-spacing: 10px;
+} 
+
 .register {
   display: none;
 }
@@ -35,4 +39,9 @@
 
 #chiron {
   margin: 0;
+}
+
+.hamburger-btn {
+  width: 100px;
+  margin: 10px;
 }
