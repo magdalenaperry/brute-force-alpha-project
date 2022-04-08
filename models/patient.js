@@ -3,8 +3,14 @@ const {
   DataTypes
 } = require('sequelize');
 const sequelize = require('../config/connection');
+const bcrypt = require('bcrypt');
 
-class Patient extends Model { }
+
+class Patient extends Model {
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
+}
 
 Patient.init({
   id: {
@@ -37,6 +43,7 @@ Patient.init({
   },
   age: {
     type: DataTypes.INTEGER,
+    allowNull: false,
   },
   race: {
     type: DataTypes.STRING,
@@ -77,12 +84,26 @@ Patient.init({
   history: {
     type: DataTypes.STRING
   }
-}, {
-  sequelize,
-  timestamps: false,
-  freezeTableName: true,
-  underscored: true,
-  modelName: 'patient'
-});
+},
+
+  {
+
+    hooks: {
+      beforeCreate: async (newUserData) => {
+        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
+      },
+      beforeUpdate: async (updatedUserData) => {
+        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+        return updatedUserData;
+      },
+    },
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'patient'
+
+  });
 
 module.exports = Patient;
