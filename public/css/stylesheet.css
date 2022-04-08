@@ -1,12 +1,12 @@
   /* /* .cascading-right {
     margin-right: -50px;
   } */
-
+/* 
   @media (max-width: 991.98px) {
     .cascading-right {
       margin-right: 0;
     }
-  } 
+  }  */
 
 .register {
   display: none;
@@ -18,6 +18,15 @@
 
 #secondaryQuestions {
   display: none;
+  transition: all 2ms;
+}
+
+#moreQuestions {
+  transition: all 2ms;
+}
+
+#ogQuestions{
+  transition: all 2ms;
 }
 
 #signupBtn {
