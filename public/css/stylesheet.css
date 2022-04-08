@@ -15,3 +15,11 @@
 .alert {
   display: none;
 }
+
+#secondaryQuestions {
+  display: none;
+}
+
+#signupBtn {
+  display: none;
+}

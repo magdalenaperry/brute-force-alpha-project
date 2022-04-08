@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const serialize = require('../../utils/serialize');
+const Patient = require('../../models/patient')
 
 router.post('/', async (req, res) => {
   try {
@@ -43,9 +45,11 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect email or password. Please try again!' });
       return;
     }
-
+    var serializeData = serialize(dbUserData)
+    console.log(serializeData)
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.user_id = serializeData.id;
 
       res
         .status(200)
@@ -74,17 +78,13 @@ router.post('/logout', (req, res) => {
 // CREATE new user
 router.post('/signup', async (req, res) => {
   try {
-    const dbUserData = await User.create({
-      username: req.body.username,
-      email: req.body.email,
-      password: req.body.password,
-      first_name: req.body.password, 
-      last_name: req.body.password
-    });
+    const dbUserData = await Patient.create(req.body);
+    console.log(req.body)
 
     req.session.save(() => {
       req.session.loggedIn = true;
-      
+      req.session.user_id = dbUserData.id;
+
       res.status(200).json(dbUserData);
       console.log('yay')
     });

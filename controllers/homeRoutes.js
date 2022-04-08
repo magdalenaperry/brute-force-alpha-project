@@ -11,9 +11,10 @@ const serialize = require('../utils/serialize')
 router.get('/', async (req, res) => {
   try {
     // include: [User]
-  
+
     // const patients = serialize(patientData)
-  
+    console.log('hello world')
+
     res.render('homepage', {
       loggedIn: req.session.loggedIn,
     });
@@ -24,12 +25,11 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/portal', withAuth, async (req, res) => {
-  const patientData = await Patient.findAll({
-    // include: [User]
-  });
+  const patientData = await Patient.findByPk(req.session.user_id);
+  console.log('hello')
 
-  const patients = serialize(patientData)
-
+  const patients = [serialize(patientData)]
+  console.log(patients)
   res.render('patient-portal', {
     patients
   })
