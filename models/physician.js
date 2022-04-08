@@ -45,12 +45,6 @@ Physician.init({
     type: DataTypes.TEXT,
     allowNull: false
   },
-  cal_one: {
-    type: DataTypes.TEXT
-  },
-  cal_two: {
-    type: DataTypes.TEXT
-  },
   cal_three: {
     type: DataTypes.TEXT
   }
