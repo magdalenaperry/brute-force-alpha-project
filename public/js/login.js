@@ -1,3 +1,5 @@
+
+// Successful Login!
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -18,20 +20,32 @@ const loginFormHandler = async (event) => {
     }
   }
 };
-
+// Successful SignUp!
 const signupFormHandler = async (event) => {
   try {
 
-
+    
     event.preventDefault();
     let dataObject = {}
-    const formInputs = document.querySelectorAll('.form-control')
+    const formInputs = document.querySelectorAll('.form-control');
     formInputs.forEach(form => {
       var idSplit = form.id.split('-')
       if (idSplit[1] == 'signup') {
         dataObject[idSplit[0]] = form.value
       }
     });
+
+    // captures checkboxes for family history in sign up form
+    const historyInputs = document.querySelectorAll('.history-form');
+    const historyCheckbox = [];
+    historyInputs.forEach(input =>{
+      if(input.checked){
+        historyCheckbox.push(input.value)
+      }
+    })
+    dataObject["history"] = historyCheckbox.join(', ');
+    //
+
     console.log(dataObject)
     const passwordAlert = document.querySelector('.passwordAlert');
     const generalAlert = document.querySelector('.generalAlert');
@@ -45,6 +59,8 @@ const signupFormHandler = async (event) => {
 
     console.log(response.statusText)
 
+
+    // successful login, send to home
     if (response.ok) {
       document.location.replace('/');
     } else if (password.length < 8) {
