@@ -2,25 +2,28 @@ const router = require('express').Router();
 const serialize = require('../../utils/serialize');
 const Patient = require('../../models/patient')
 
-router.post('/', async (req, res) => {
-  try {
-    const userData = await Patient.create(req.body);
-
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
-
-      res.status(200).json(userData);
-    });
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
 
 
 
+// router.post('/', async (req, res) => {
+//   try {
+//     const userData = await Patient.create(req.body);
 
-// User LOGIN
+//     req.session.save(() => {
+//       req.session.user_id = userData.id;
+//       req.session.logged_in = true;
+
+//       res.status(200).json(userData);
+//     });
+//   } catch (err) {
+//     res.status(400).json(err);
+//   }
+// });
+
+
+
+
+// PATIENT LOGIN SUCCESSFUL!
 router.post('/login', async (req, res) => {
   try {
     const dbUserData = await Patient.findOne({
@@ -35,9 +38,7 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect email or password. Please try again!' });
       return;
     }
-
-    const validPassword = await dbUserData.checkPassword(req.body.password);
-
+    const validPassword = dbUserData.checkPassword(req.body.password);
     if (!validPassword) {
       res
         .status(400)
@@ -60,6 +61,10 @@ router.post('/login', async (req, res) => {
   }
 });
 
+
+
+
+// LOGOUT SUCCESSFUL!
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
@@ -73,8 +78,7 @@ router.post('/logout', (req, res) => {
 
 
 
-// User SignUp
-// CREATE new user
+// CREATE NEW USER SUCCESSFUL!
 router.post('/signup', async (req, res) => {
   try {
     const dbUserData = await Patient.create(req.body);
