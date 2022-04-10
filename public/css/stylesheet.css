@@ -55,6 +55,11 @@ top: 50%;
   margin: 10px;
 }
 
+footer {
+  position:relative;
+  bottom: 0;
+  width: 100%;
+}
 
 /* multi step sign up form */
 * {
