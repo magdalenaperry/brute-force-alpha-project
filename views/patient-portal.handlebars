@@ -31,7 +31,7 @@
         <div class="row">
           <div class="col-md-5">
             <div class="text-center border border-secondary mb-4">
-              <img alt="patient-profile-pic" src="{{profile_img}}" width="350" />
+              <img alt="patient-profile-pic" class="img-fluid" src="{{profile_img}}" width="350" />
               <h3 class="fs-4 mt-3 mb-4 text-secondary text-uppercase fw-light">
                 {{first_name}} {{last_name}}
 
@@ -60,18 +60,28 @@
                 Height:
               </dt>
               <dd>
-                5'1
+                {{height}}
               </dd>
               <dt>
                 Weight:
               </dt>
               <dd>
-                92 lbs
+                {{weight}}
               </dd>
 
               {{#if history}}
-              <dt>Family History</dt>
+              <dt>Family History:</dt>
               <dd>{{history}}</dd>
+              {{/if}}
+
+              {{#if drug_use}}
+              <dt>Recreational Drug Use:</dt>
+              <dd>{{drug_use}}</dd>
+              {{/if}}
+
+              {{#if alcohol_use}}
+              <dt>Alcohol Consumption:</dt>
+              <dd>{{alcohol_use}}</dd>
               {{/if}}
 
               {{#if rx}}
