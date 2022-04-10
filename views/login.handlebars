@@ -1,280 +1,418 @@
-<!-- Section: Design Block -->
-<section class="text-center text-lg-start register">
 
-  <div class="passwordAlert alert alert-warning alert-dismissible fade show" role="alert">
-    <strong>Please Try Again</strong> Password must be at least 8 characters long.
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
+{{!-- password alerts for login and signup --}}
+<div class="passwordAlert py-5 alert alert-warning alert-dismissable fade show" role="alert">
+  <strong>Oops!</strong> We couldn't log you in. Please verify your email and password and try again.
+  <button type="button" class="btn-close" data-bs-dismiss="alert">
+  </button>
+</div>
 
-  <div class="generalAlert alert alert-warning alert-dismissible fade show" role="alert">
-    <strong>Please Try Again</strong> Check your credentials, if you already have an account please log in.
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-
-  <!-- Jumbotron -->
-  <div class="container py-5">
-    <div class="row justify-content-center align-items-center">
-      <div class="col-9">
-        <div class="card cascading-right" style="
-              background: hsla(0, 0%, 100%, 0.55);
-              backdrop-filter: blur(30px);
-              ">
-          <div class="card-body p-5 shadow-5 text-center">
-            <h2 class="fw-bold mb-5" id="signupText">Sign up now</h2>
-            <form class="signup-form ">
-              <!-- first name & last name -->
-              <div id="ogQuestions">
-                <div class="row">
-                  <div class="col-md-6 mb-4">
-                    <div class="form-outline">
-                      <input type="text" id="first_name-signup" class="form-control" />
-                      <label class="form-label" for="first_name-signup">First Name</label>
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-4">
-                    <div class="form-outline">
-                      <input type="text" id="last_name-signup" class="form-control" />
-                      <label class="form-label" for="last_name-signup">Last Name</label>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- username input -->
-                <div class="form-outline mb-4">
-                  <input type="text" id="username-signup" class="form-control" />
-                  <label class="form-label" for="username-signup">username</label>
-                </div>
+<div class="generalAlert py-5 alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Uh oh!</strong> In order to keep you safe, your password must be greater than 8 characters.
+  <button type="button" class="btn-close" data-bs-dismiss="alert">
+  </button>
+</div>
 
 
-                <!-- Email input -->
-                <div class="form-outline mb-4">
-                  <input type="email" id="email-signup" class="form-control" />
-                  <label class="form-label" for="email-signup">Email</label>
-                </div>
-
-                <!-- Password input -->
-                <div class="form-outline mb-4">
-                  <input type="password" id="password-signup" class="form-control" />
-                  <label class="form-label" for="password-signup">Password</label>
-                </div>
-              </div>
-              <div id="secondaryQuestions">
-                <div class="form-outline mb-4">
-                  <input type="text" id="sex-signup" class="form-control" />
-                  <label class="form-label" for="sex-signup">Sex</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="text" id="age-signup" class="form-control" />
-                  <label class="form-label" for="age-signup">Age</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="text" id="race-signup" class="form-control" />
-                  <label class="form-label" for="race-signup">Race</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="text" id="street_address-signup" class="form-control" />
-                  <label class="form-label" for="street_address-signup">Street Address</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="text" id="city-signup" class="form-control" />
-                  <label class="form-label" for="city-signup">City</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="text" id="state-signup" class="form-control" />
-                  <label class="form-label" for="state-signup">State</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="text" id="zipcode-signup" class="form-control" />
-                  <label class="form-label" for="zipcode-signup">Zipcode</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="text" id="phone-signup" class="form-control" />
-                  <label class="form-label" for="phone-signup">Phone</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="text" id="rx-signup" class="form-control" />
-                  <label class="form-label" for="rx-signup">RX</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="text" id="dx-signup" class="form-control" />
-                  <label class="form-label" for="dx-signup">DX</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="text" id="procedure-signup" class="form-control" />
-                  <label class="form-label" for="procedure-signup">Procedure</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="text" id="insurance_name-signup" class="form-control" />
-                  <label class="form-label" for="insurance_name-signup">Insurance Name</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="text" id="allergies-signup" class="form-control" />
-                  <label class="form-label" for="allergies-signup">Allergies</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="text" id="illness-signup" class="form-control" />
-                  <label class="form-label" for="illness-signup">Illness</label>
-                </div>
-
-
-
-  <div class="form-group">
-    <label class="col-md-12 control-label" for="family_history">Do you have a family history of any of the following
-      illnesses?</label>
-    <div class="col-md-4">
-      <br>
-      <div class="checkbox">
-        <label for="family_history-0">
-          <input type="checkbox" name="asthma" class="history-form" id="asthma-signup" value="Asthma">
-          Asthma
-        </label>
-      </div>
-      <div class="checkbox">
-        <label for="family_history-1">
-          <input type="checkbox" name="cancer" class="history-form" id="cancer" value="Cancer">
-          Cancer
-        </label>
-      </div>
-      <div class="checkbox">
-        <label for="family_history-2">
-          <input type="checkbox" name="cardiac_disease" class="history-form" id="cardiac-disease"
-            value="Cardiac Disease">
-          Cardiac disease
-        </label>
-      </div>
-      <div class="checkbox">
-        <label for="family_history-3">
-          <input type="checkbox" name="diabetes" class="history-form" id="diabetes" value="Diabetes">
-          Diabetes
-        </label>
-      </div>
-      <div class="checkbox">
-        <label for="family_history-4">
-          <input type="checkbox" name="hypertension" class="history-form" id="hypertension" value="Hypertension">
-          Hypertension
-        </label>
-      </div>
-      <div class="checkbox">
-        <label for="family_history-5">
-          <input type="checkbox" name="psychiatric" class="history-form" id="psychiatric" value="Psychiatric Disorder">
-          Psychiatric disorder
-        </label>
-      </div>
-      <div class="checkbox">
-        <label for="family_history-6">
-          <input type="checkbox" name="epilepsy" class="history-form" id="epilepsy" value="Epilepsy">
-          Epilepsy
-        </label>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-                {{!-- <div class="form-outline mb-4">
-                  <input type="text" id="history-signup" class="form-control" />
-                  <label class="form-label" for="history-signup">History</label>
-                </div> --}}
-
-
-
-
-
-
-              </div>
-              <!-- Submit button -->
-              <div class="d-grid gap-2">
-                <button type="submit" id="signupBtn" class="btn btn-warning btn-lg btn-block mb-4">
-                  Sign Up
-                </button>
-                <button type="button" id="moreQuestions">Load more</button>
-                <button type="button" class="login-btn btn btn-info btn-lg btn-block mb-4">
-                  Login
-                </button>
-              </div>
-
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6 mb-5 mb-lg-0">
-        <img id='loginImg' src="https:/via.placeholder.com/500" class="w-100 rounded-4 shadow-4" alt="" />
-      </div>
-    </div>
-  </div>
-  <!-- Jumbotron -->
-</section>
-<!-- Section: Design Block -->
-
-
-{{!-- Login!! --}}
-
-<!-- Jumbotron -->
 <section class="text-center text-lg-start login">
 
-  <div class="container py-5">
-    <div class="row g-0 align-items-center">
-      <div class="col-lg-6 mb-5 mb-lg-0">
-        <div class="card cascading-right" style="
-            background: hsla(0, 0%, 100%, 0.55);
+  <div class="container py-5 content">
+    <div class="row">
+      <div class="col-12 col-lg-8 m-auto mb-4 shadow p-4 bg-white js-active">
+        {{!-- <div class="card cascading-right" style=" --}}
+            {{!-- background: hsla(0, 0%, 100%, 0.55);
             backdrop-filter: blur(30px);
-            ">
-          <div class="card-body p-5 shadow-5 text-center">
-            <h2 class="fw-bold mb-5">Login</h2>
+            "> --}}
+          {{!-- <div class="card-body p-5 shadow-5 text-center"> --}}
+            <h2 class="mb-5 text-center">Login</h2>
             <form class="login-form">
 
               <!-- Email input -->
               <div class="form-outline mb-4">
-                <input type="email" id="email-login" class="form-control" />
-                <label class="form-label" for="email-login">Email</label>
+                <input type="email" id="email-login" class="form-control" placeholder="Email" />
               </div>
 
               <!-- Password input -->
               <div class="form-outline mb-4">
-                <input type="password" id="password-login" class="form-control" />
-                <label class="form-label" for="password-login">Password</label>
+                <input type="password" id="password-login" class="form-control" placeholder="Password" />
+                {{!-- <label -login">Password</label> --}}
               </div>
+                
+                <button type="submit" class="login-btn btn btn-info px-3 fs-5 mb-4">
+                  Login
+                </button>
 
               <div class="d-grid gap-2">
 
-                <button type="submit" class="btn btn-info btn-lg btn-block mb-4">
-                  Login
-                </button>
-                <button type="button" class="sign-up-btn btn btn-warning btn-lg btn-block mb-4">
-                  Sign Up
-                </button>
+
               </div>
             </form>
-          </div>
-        </div>
+              <div class="text-center fs-5">
+                Don't have an account? Click to <a href=""> <strong class="text-warning">Sign Up</strong> </a> instead!
+              </div>
+            {{!--
+          </div> --}}
+          {{!-- </div> --}}
       </div>
 
-      <div class="col-lg-6 mb-5 mb-lg-0">
+      {{!-- <div class="col-lg-6 mb-5 mb-lg-0">
         <img src="https:/via.placeholder.com/500" class="w-100 rounded-4 shadow-4" alt="" />
+      </div> --}}
+    </div>
+  </div>
+</section>
+
+<section>
+  <!--PEN CONTENT     -->
+  <div class="content">
+    <!--content inner-->
+    <div class="content__inner">
+      <div class="container overflow-hidden">
+        <!--multisteps-form-->
+        <div class="multisteps-form">
+          <!--progress bar-->
+          <div class="row pt-1">
+            <div class="col-12 col-lg-8 m-auto mb-4">
+              <div class="multisteps-form__progress">
+
+                <button class="multisteps-form__progress-btn js-active" type="button" title="Login">Sign Up</button>
+
+                <button class="multisteps-form__progress-btn" type="button" title="Address">Profile</button>
+
+                <button class="multisteps-form__progress-btn" type="button" title="Order Info">Medical History</button>
+
+                <button class="multisteps-form__progress-btn" type="button" title="Comments">Lifestyle</button>
+
+              </div>
+            </div>
+          </div>
+
+          <!--form panels-->
+          <div class="row">
+            <div class="col-12 col-lg-8 m-auto">
+              <form class="signup-form multisteps-form__form">
+
+                <!--single form panel-->
+                <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                  <h3 class="multisteps-form__title text-center mb-5">Sign Up</h3>
+                  <div class="multisteps-form__content">
+
+                    <div class="form-outline mb-4">
+                      <input id="first_name-signup" class="multisteps-form__input form-control" type="text"
+                        placeholder="First Name" />
+                    </div>
+                    <div class="form-outline mb-4">
+                      <input id="last_name-signup" class="multisteps-form__input form-control" type="text"
+                        placeholder="Last Name" />
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <input id="username-signup" class="multisteps-form__input form-control" type="text"
+                        placeholder="Username" />
+                    </div>
+                    <div class="form-outline mb-4">
+                      <input id="email-signup" class="multisteps-form__input form-control" type="email"
+                        placeholder="Email" />
+                    </div>
+                    <div class="form-outline mb-4">
+                      <input id="password-signup" class="multisteps-form__input form-control" type="password"
+                        placeholder="Password" />
+                    </div>
+
+                    <div class="justify-content-center text-center mt-4">
+                      <button class="btn btn-secondary px-3 ml-auto js-btn-next" type="button"
+                        title="Next">Next</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!--single form panel-->
+                <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                  <h3 class="multisteps-form__title text-center mb-5">Profile</h3>
+                  <div class="multisteps-form__content">
+                    <h5 class="">Patient Information:</h5>
+
+
+                    <!-- race/sex height/weight -->
+                    <div class="row mt-4">
+                      <div class="col-4">
+                        <input id="race-signup" class="multisteps-form__input form-control" type="text"
+                          placeholder="Race" />
+                      </div>
+
+                      <div class="col-4">
+                        <input id="age-signup" class="multisteps-form__input form-control" type="text"
+                          placeholder="Age" />
+                      </div>
+
+                      <div class="col-4">
+                        <input id="sex-signup" class="multisteps-form__input form-control" type="text"
+                          placeholder="Sex" />
+                      </div>
+                    </div>
+
+                    <div class="row mt-4">
+                      <div class="col-6 col-sm-6">
+                        <input id="height-signup" class="multisteps-form__input form-control" type="text"
+                          placeholder="Height" />
+                      </div>
+
+                      <div class="col-6 col-sm-6 mb-4">
+                        <input id="weight-signup" class="multisteps-form__input form-control" type="text"
+                          placeholder="Weight" />
+                      </div>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                      <input id="insurance_name-signup" class="multisteps-form__input form-control" type="text"
+                        placeholder="Insurance Provider" />
+                    </div>
+
+                    <h5 class="">Contact:</h5>
+
+                    <div class="col mb-4">
+                      <input id="phone-signup" class="multisteps-form__input form-control" type="text"
+                        placeholder="(123) 867-5309" />
+                    </div>
+
+                    <div class="row">
+
+
+
+
+
+                      <div class="col">
+                        <input id="street_address-signup" class="multisteps-form__input form-control" type="text"
+                          placeholder="Street Address" />
+                      </div>
+
+                    </div>
+
+
+                    <!-- city/state/zip -->
+                    <div class="row mt-4">
+                      <div class="col-12 col-sm-6">
+                        <input id="city-signup" class="multisteps-form__input form-control" type="text"
+                          placeholder="City" />
+                      </div>
+
+                      <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                        <input id="state-signup" class="multisteps-form__input form-control" type="text"
+                          placeholder="State" />
+                      </div>
+
+                      <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                        <input id="zipcode-signup" class="multisteps-form__input form-control" type="text"
+                          placeholder="Zip" />
+                      </div>
+                    </div>
+
+                    <!-- buttons -->
+                    <div class="justify-content-center text-center mt-4">
+                      <button class="btn btn-secondary px-3 js-btn-Back" type="button" title="Back">Back</button>
+                      <button class="btn btn-secondary px-3 ml-auto js-btn-next" type="button"
+                        title="Next">Next</button>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!--single form panel-->
+                <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                  <h3 class="multisteps-form__title mb-5 text-center">Medical History</h3>
+                  <div class="multisteps-form__content">
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="row">
+
+                      <h5>Do you have a family history of any of the following?</h5>
+                      <!-- checkboxes for patient history -->
+                      <div class="col-md-4">
+                        <br>
+                        <div class="checkbox">
+                          <label for="family_history-0">
+                            <input type="checkbox" name="asthma" class="history-form" id="asthma-signup" value="Asthma">
+                            Asthma
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label for="family_history-1">
+                            <input type="checkbox" name="cancer" class="history-form" id="cancer" value="Cancer">
+                            Cancer
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label for="family_history-2">
+                            <input type="checkbox" name="cardiac_disease" class="history-form" id="cardiac-disease"
+                              value="Cardiac Disease">
+                            Cardiac disease
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label for="family_history-3">
+                            <input type="checkbox" name="diabetes" class="history-form" id="diabetes" value="Diabetes">
+                            Diabetes
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label for="family_history-4">
+                            <input type="checkbox" name="hypertension" class="history-form" id="hypertension"
+                              value="Hypertension">
+                            Hypertension
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label for="family_history-5">
+                            <input type="checkbox" name="psychiatric" class="history-form" id="psychiatric"
+                              value="Psychiatric Disorder">
+                            Psychiatric disorder
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label for="family_history-6">
+                            <input type="checkbox" name="epilepsy" class="history-form" id="epilepsy" value="Epilepsy">
+                            Epilepsy
+                          </label>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="row">
+                      <div class="justify-content-center text-center mt-4">
+                        <button class="btn btn-secondary px-3 js-btn-Back" type="button" title="Back">Back</button>
+                        <button class="btn btn-secondary px-3 ml-auto js-btn-next" type="button"
+                          title="Next">Next</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--single form panel-->
+                <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                  <h3 class="multisteps-form__title text-center mb-5">Lifestyle & Substances</h3>
+                  <div class="multisteps-form__content">
+
+                    <h5>How often do you consume alcohol?</h5>
+                    <div class="mb-3">
+                      <div class="radio">
+                        <label for="family_history-1">
+                          <input type="radio" name="alcohol" class="alcohol-form"  value="never">
+                          never
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label for="family_history-1">
+                          <input type="radio" name="alcohol" class="alcohol-form" 
+                            value="monthly or less">
+                          once a month or less
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label for="family_history-1">
+                          <input type="radio" name="alcohol" class="alcohol-form" 
+                            value="1-2 times per week">
+                          one to two times per week
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label for="family_history-1">
+                          <input type="radio" name="alcohol" class="alcohol-form" value="3-4 times per week">
+                          three to four times per week
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label for="family_history-1">
+                          <input type="radio" name="alcohol" class="alcohol-form"  value="daily">
+                          daily
+                        </label>
+                      </div>
+                    </div>
+
+
+                    <!-- checkboxes for patient history -->
+                    <h5>Do you use any of the following recreational drugs?</h5>
+                    <div class="col-md-4">
+                      <div class="checkbox">
+                        <label for="family_history-0">
+                          <input type="checkbox" name="asthma" class="drug-form" value="Inhalants">
+                          Inhalants
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label for="family_history-1">
+                          <input type="checkbox" name="cancer" class="drug-form"
+                            value="Stimulants (cocaine, crack, amphetamine, speed, crank)">
+                          Stimulants
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label for="family_history-2">
+                          <input type="checkbox" name="cardiac_disease" class="drug-form"
+                            value="Depressants (barbiturates, GHB)">
+                          Depressants
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label for="family_history-3">
+                          <input type="checkbox" name="diabetes" class="drug-form"
+                            value="Opiates (Heroin, morphine, methadone, codeine, opium, demerol)">
+                          Opiates
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label for="family_history-4">
+                          <input type="checkbox" name="hypertension" class="drug-form"
+                            value="Hallucinogens (LSD/acid, peyote, psilocybin, MDMA/ecstasy)">
+                          Hallucinogens
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label for="family_history-5">
+                          <input type="checkbox" name="psychiatric" class="drug-form" value="Prescription Drugs">
+                          Prescription Drugs
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label for="family_history-6">
+                          <input type="checkbox" name="epilepsy" class="drug-form" value="Steroids">
+                          Steroids
+                        </label>
+                      </div>
+
+                      <div class="checkbox">
+                        <label for="family_history-6">
+                          <input type="checkbox" name="epilepsy" class="drug-form" value="Cannabinoids">
+                          Cannabinoids
+                        </label>
+                      </div>
+
+                    </div>
+
+                    <div class="justify-content-center text-center mt-4">
+                      <button class="btn btn-secondary px-3 js-btn-Back" type="button" title="Back">Back</button>
+                      <button class="btn btn-warning px-3 ml-auto" type="submit" title="Send">Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script>
 
 <script src="./js/login.js"></script>
 <script src="./js/index.js"></script>

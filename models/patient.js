@@ -78,15 +78,24 @@ Patient.init({
   insurance_name: {
     type: DataTypes.STRING
   },
+  height: {
+    type: DataTypes.STRING
+  },
+  weight: {
+    type: DataTypes.STRING
+  },
   allergies: {
     type: DataTypes.STRING
   },
-  illness: {
+  alcohol_use: {
     type: DataTypes.STRING
   },
   history: {
     type: DataTypes.STRING
   }, 
+  drug_use: {
+    type: DataTypes.STRING
+  },
   profile_img: {
     type: DataTypes.STRING, 
     defaultValue: "https://gravatar.com/avatar/d5e2c98ea3e5c08da84ddb5c616a27dd?s=400&d=robohash&r=x"
