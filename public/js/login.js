@@ -1,3 +1,5 @@
+// mult-step sign up form
+
 //DOM elements
 const DOMstrings = {
   stepsBtnClass: 'multisteps-form__progress-btn',
@@ -179,15 +181,27 @@ const animationSelect = document.querySelector('.pick-animation__select');
 
 
 
+// ======= SIGN UP & LOGIN FUNCTIONALITY =======
+
+
+const loginAlert = function () {
+  const alertEL = document.createElement('div');
+  alertEL.classList.add('alert', 'alert-warning', 'alert-dismissable', 'fade', 'show');
+  alertEL.setAttribute('role', 'alert')
+  const alertBtn = document.createElement('button');
+  alertBtn.classList.add('btn-close');
+  alertBtn.setAttribute('type','')
 
 
 
 
+}
 
 // Successful Login!
 const loginFormHandler = async (event) => {
   event.preventDefault();
-
+  
+  const passwordAlert = document.querySelector('.passwordAlert');
   const email = document.querySelector('#email-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
 
@@ -197,15 +211,19 @@ const loginFormHandler = async (event) => {
       body: JSON.stringify({ email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
-
+console.log(response);
     if (response.ok) {
       document.location.replace('/');
     } else {
-      alert('Failed to log in.');
+      // alert('Failed to log in.');
+      passwordAlert.style.display = 'block';
+      const generalAlert = document.querySelector('.generalAlert');
+      
     }
   }
 };
-// Successful SignUp!
+
+
 const signupFormHandler = async (event) => {
   try {
 
@@ -221,7 +239,6 @@ const signupFormHandler = async (event) => {
     });
 
     // captures checkboxes for family history in sign up form
-    // successful!
     const historyInputs = document.querySelectorAll('.history-form');
     const historyCheckbox = [];
     historyInputs.forEach(input =>{
@@ -234,7 +251,6 @@ const signupFormHandler = async (event) => {
 
 
     // captures checkboxes for family history in sign up form
-    // successful!
     const drugInputs = document.querySelectorAll('.drug-form');
     const drugCheckbox = [];
     drugInputs.forEach(input => {
@@ -245,7 +261,7 @@ const signupFormHandler = async (event) => {
     dataObject["drug_use"] = drugCheckbox.join(', ');
     //
 
-
+// captures radio buttons for alcohol use in sign up form
     const alcoholInputs = document.querySelectorAll('.alcohol-form');
     const alcoholCheckbox = [];
     alcoholInputs.forEach(input => {
@@ -255,14 +271,9 @@ const signupFormHandler = async (event) => {
     });
     dataObject["alcohol_use"] = alcoholCheckbox.join(', ')
  
-
-
-
-
     console.log(dataObject)
-    const passwordAlert = document.querySelector('.passwordAlert');
+    // const passwordAlert = document.querySelector('.passwordAlert');
     const generalAlert = document.querySelector('.generalAlert');
-
 
     const response = await fetch('/api/users/signup', {
       method: 'POST',
@@ -272,15 +283,16 @@ const signupFormHandler = async (event) => {
 
     console.log(response.statusText)
 
-
     // successful login, send to home
     if (response.ok) {
       document.location.replace('/');
-    } else if (password.length < 8) {
+    } else if (dataObject.password.length < 8) {
+      console.log(dataObject.password)
       console.log("password length is smaller than 8")
+      generalAlert.style.display = 'block';
       // passwordAlert.style.display = 'block';
     } else if (response.status === 500) {
-      // generalAlert.style.display = 'block';
+
     }
 
   } catch (err) {
@@ -299,7 +311,9 @@ const signupFormHandler = async (event) => {
 
 document
   .querySelector('.login-form')
-  .addEventListener('submit', loginFormHandler);
+  .addEventListener('submit', 
+  loginFormHandler, 
+  console.log('clickedme'));
 
 document
   .querySelector('.signup-form')

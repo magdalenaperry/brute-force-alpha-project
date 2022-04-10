@@ -20,6 +20,15 @@
   display: none;
 }
 
+.passwordAlert {
+top: 50%;
+  
+}
+
+.passwordBtn{
+  height:20px;
+}
+
 #secondaryQuestions {
   display: none;
   transition: all 2ms;
@@ -47,12 +56,7 @@
 }
 
 
-
-
-
-
-
-
+/* multi step sign up form */
 * {
   margin: 0;
   padding: 0;

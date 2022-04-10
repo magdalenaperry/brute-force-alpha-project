@@ -1,3 +1,18 @@
+
+{{!-- password alerts for login and signup --}}
+<div class="passwordAlert py-5 alert alert-warning alert-dismissable fade show" role="alert">
+  <strong>Oops!</strong> We couldn't log you in. Please verify your email and password and try again.
+  <button type="button" class="btn-close" data-bs-dismiss="alert">
+  </button>
+</div>
+
+<div class="generalAlert py-5 alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Uh oh!</strong> In order to keep you safe, your password must be greater than 8 characters.
+  <button type="button" class="btn-close" data-bs-dismiss="alert">
+  </button>
+</div>
+
+
 <section class="text-center text-lg-start login">
 
   <div class="container py-5 content">
@@ -21,19 +36,19 @@
                 <input type="password" id="password-login" class="form-control" placeholder="Password" />
                 {{!-- <label -login">Password</label> --}}
               </div>
-
-              <div class="d-grid gap-2">
-
-                <button type="submit" class="btn btn-info px-3 fs-5 mb-4">
+                
+                <button type="submit" class="login-btn btn btn-info px-3 fs-5 mb-4">
                   Login
                 </button>
 
-              </div>
-              <div class="text-center fs-5">
-                Don't have an account? Click to
-                <a href=""> <strong class="text-warning">Sign Up</strong> </a> instead!
+              <div class="d-grid gap-2">
+
+
               </div>
             </form>
+              <div class="text-center fs-5">
+                Don't have an account? Click to <a href=""> <strong class="text-warning">Sign Up</strong> </a> instead!
+              </div>
             {{!--
           </div> --}}
           {{!-- </div> --}}

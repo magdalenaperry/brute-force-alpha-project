@@ -1,27 +1,27 @@
-const {
-    Model,
-    DataTypes
-} = require('sequelize');
-const sequelize = require('../config/connection');
+// const {
+//     Model,
+//     DataTypes
+// } = require('sequelize');
+// const sequelize = require('../config/connection');
 
-class Drugs extends Model { }
+// class Drugs extends Model { }
 
-Drugs.init({
-    id: {
-        type: DataTypes.INTEGER,
-        primaryKey: true
+// Drugs.init({
+//     id: {
+//         type: DataTypes.INTEGER,
+//         primaryKey: true
 
-    },
-    rec_drugs: {
-        type: DataTypes.STRING,
-    }
+//     },
+//     rec_drugs: {
+//         type: DataTypes.STRING,
+//     }
 
-}, {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'drugs',
-});
+// }, {
+//     sequelize,
+//     timestamps: false,
+//     freezeTableName: true,
+//     underscored: true,
+//     modelName: 'drugs',
+// });
 
-module.exports = Drugs
+// module.exports = Drugs
