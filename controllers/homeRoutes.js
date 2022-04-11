@@ -53,12 +53,12 @@ router.get('/login', async (req, res) => {
 // SUCCESSFUL!
 router.get('/about', async (req, res) => {
   try {
-    const { data } = await axios.get("https://api.calendly.com/users/me", {
-      headers: {
-        // eslint-disable-next-line no-undef
-        Authorization: `Bearer ${process.env['ULBERTOLAURENZI']}`
-      }
-    })
+    // const { data } = await axios.get("https://api.calendly.com/users/me", {
+    //   headers: {
+    //     // eslint-disable-next-line no-undef
+    //     Authorization: `Bearer ${process.env['ULBERTOLAURENZI']}`
+    //   }
+    // })
     console.log(data);
     const physicianData = await Physician.findAll({
     });
