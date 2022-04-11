@@ -1,39 +1,8 @@
-
 .letter-spacing{
   letter-spacing: 10px;
 } 
 
-.register {
-  display: none;
-}
-
 .alert {
-  display: none;
-}
-
-.passwordAlert {
-top: 50%;
-  
-}
-
-.passwordBtn{
-  height:20px;
-}
-
-#secondaryQuestions {
-  display: none;
-  transition: all 2ms;
-}
-
-#moreQuestions {
-  transition: all 2ms;
-}
-
-#ogQuestions{
-  transition: all 2ms;
-}
-
-#signupBtn {
   display: none;
 }
 
