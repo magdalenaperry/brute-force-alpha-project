@@ -59,7 +59,7 @@ router.get('/about', async (req, res) => {
     //     Authorization: `Bearer ${process.env['ULBERTOLAURENZI']}`
     //   }
     // })
-    console.log(data);
+    // console.log(data);
     const physicianData = await Physician.findAll({
     });
     const physicians = serialize(physicianData)
