@@ -46,11 +46,20 @@ top: 50%;
   margin: 10px;
 }
 
-footer {
-  position:relative;
-  bottom: 0;
-  width: 100%;
+.spacing-bottom {
+  display: none;
+  padding-bottom: 600px;
 }
+
+.spacing-top {
+  padding-top: 150px;
+}
+
+#signup-box {
+  display: none;
+}
+
+
 
 /* multi step sign up form */
 * {

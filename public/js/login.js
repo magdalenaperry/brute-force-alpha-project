@@ -1,3 +1,21 @@
+const loginBox = document.querySelector('#login-box');
+const signupLink = document.querySelector('#signup-link');
+const signupBox = document.querySelector('#signup-box');
+const paddingBox = document.querySelector('.spacing-bottom');
+// const signupSection = document.querySelectorAll('.signup-section');
+
+const hideLogin = function (){
+  signupBox.style.display = 'block';
+  paddingBox.style.display = 'block';
+  loginBox.style.display = 'none';
+};
+
+signupLink.addEventListener('click', hideLogin);
+
+
+
+
+
 // mult-step sign up form
 
 //DOM elements
