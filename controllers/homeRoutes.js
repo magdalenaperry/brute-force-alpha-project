@@ -7,13 +7,10 @@ const {
 
 const serialize = require('../utils/serialize');
 
-const { default: axios } = require('axios');
 // homepage
 router.get('/', async (req, res) => {
   try {
-    // include: [User]
 
-    // const patients = serialize(patientData)
     console.log('hello world')
 
     res.render('homepage', {
@@ -53,13 +50,7 @@ router.get('/login', async (req, res) => {
 // SUCCESSFUL!
 router.get('/about', async (req, res) => {
   try {
-    // const { data } = await axios.get("https://api.calendly.com/users/me", {
-    //   headers: {
-    //     // eslint-disable-next-line no-undef
-    //     Authorization: `Bearer ${process.env['ULBERTOLAURENZI']}`
-    //   }
-    // })
-    // console.log(data);
+
     const physicianData = await Physician.findAll({
     });
     const physicians = serialize(physicianData)
@@ -74,8 +65,6 @@ router.get('/about', async (req, res) => {
   }
 
 });
-
-
 
 router.get('/portal', async (req, res) => {
   res.render('patient-portal');
