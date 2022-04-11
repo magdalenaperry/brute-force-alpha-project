@@ -94,9 +94,7 @@ const setActivePanel = activePanelNum => {
 
     }
   });
-
 };
-
 //set form height equal to current panel height
 const formHeight = activePanel => {
 
@@ -152,14 +150,10 @@ DOMstrings.stepsForm.addEventListener('click', e => {
     activePanelNum--;
 
   } else {
-
     activePanelNum++;
-
   }
-
   setActiveStep(activePanelNum);
   setActivePanel(activePanelNum);
-
 });
 
 //SETTING PROPER FORM HEIGHT ONLOAD
@@ -179,8 +173,6 @@ const setAnimationType = newType => {
 //selector onchange - changing animation
 const animationSelect = document.querySelector('.pick-animation__select');
 
-
-
 // ======= SIGN UP & LOGIN FUNCTIONALITY =======
 
 
@@ -190,17 +182,13 @@ const loginAlert = function () {
   alertEL.setAttribute('role', 'alert')
   const alertBtn = document.createElement('button');
   alertBtn.classList.add('btn-close');
-  alertBtn.setAttribute('type','')
-
-
-
-
+  alertBtn.setAttribute('type', '')
 }
 
 // Successful Login!
 const loginFormHandler = async (event) => {
   event.preventDefault();
-  
+
   const passwordAlert = document.querySelector('.passwordAlert');
   const email = document.querySelector('#email-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
@@ -211,14 +199,14 @@ const loginFormHandler = async (event) => {
       body: JSON.stringify({ email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
-console.log(response);
+    console.log(response);
     if (response.ok) {
       document.location.replace('/');
     } else {
       // alert('Failed to log in.');
       passwordAlert.style.display = 'block';
       const generalAlert = document.querySelector('.generalAlert');
-      
+
     }
   }
 };
@@ -227,7 +215,7 @@ console.log(response);
 const signupFormHandler = async (event) => {
   try {
 
-    
+
     event.preventDefault();
     let dataObject = {}
     const formInputs = document.querySelectorAll('.form-control');
@@ -241,8 +229,8 @@ const signupFormHandler = async (event) => {
     // captures checkboxes for family history in sign up form
     const historyInputs = document.querySelectorAll('.history-form');
     const historyCheckbox = [];
-    historyInputs.forEach(input =>{
-      if(input.checked){
+    historyInputs.forEach(input => {
+      if (input.checked) {
         historyCheckbox.push(input.value)
       }
     })
@@ -261,16 +249,16 @@ const signupFormHandler = async (event) => {
     dataObject["drug_use"] = drugCheckbox.join(', ');
     //
 
-// captures radio buttons for alcohol use in sign up form
+    // captures radio buttons for alcohol use in sign up form
     const alcoholInputs = document.querySelectorAll('.alcohol-form');
     const alcoholCheckbox = [];
     alcoholInputs.forEach(input => {
-      if (input.checked){
+      if (input.checked) {
         alcoholCheckbox.push(input.value);
       };
     });
     dataObject["alcohol_use"] = alcoholCheckbox.join(', ')
- 
+
     console.log(dataObject)
     // const passwordAlert = document.querySelector('.passwordAlert');
     const generalAlert = document.querySelector('.generalAlert');
@@ -300,20 +288,11 @@ const signupFormHandler = async (event) => {
   }
 }
 
-// const closeBtn = document.querySelector('.close');
-
-// const closeAlert = function () {
-//   $(".alert").alert('close')
-// };
-
-// closeBtn.addEventListener('click', closeAlert)
-
-
 document
   .querySelector('.login-form')
-  .addEventListener('submit', 
-  loginFormHandler, 
-  console.log('clickedme'));
+  .addEventListener('submit',
+    loginFormHandler,
+    console.log('clickedme'));
 
 document
   .querySelector('.signup-form')

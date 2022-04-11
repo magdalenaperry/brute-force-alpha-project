@@ -10,28 +10,27 @@
   </div>
 </div>
 
-
 {{#each physicians}}
-<div class="card bg-light text-center mb-5 mx-5">
-  <div class="bg-image hover-overlay ripple mt-5" data-mdb-ripple-color="light">
-    <img src="{{phys_image}}" class="img-fluid" width="200px" />
+  <div class="card bg-light text-center mb-5 mx-5">
+    <div class="bg-image hover-overlay ripple mt-5" data-mdb-ripple-color="light">
+      <img src="{{phys_image}}" class="img-fluid" width="200px" />
       <div class="mask"></div>
-    </a>
-  </div>
+      </a>
+    </div>
 
-  <div class="card-body mb-5">
-    <h5 class="card-title fs-4">{{first_name}} {{last_name}}, MD</h5>
-    <p class="mx-4">{{phys_bio}}</p>
-    <p class="card-text text-warning text-uppercase fs-4">{{specialty}}</p>
-    <p class="card-text fs-5 ">{{university}}</p>
+    <div class="card-body mb-5">
+      <h5 class="card-title fs-4">{{first_name}} {{last_name}}, MD</h5>
+      <p class="mx-4">{{phys_bio}}</p>
+      <p class="card-text text-warning text-uppercase fs-4">{{specialty}}</p>
+      <p class="card-text fs-5 ">{{university}}</p>
 
-    {{!-- Calendly --}}
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <a href="" onclick="Calendly.initPopupWidget({url: '{{cal_three}}'});return false;">
-      <button type="button" class="btn btn-warning">Schedule an Appointment</button>
-    </a>
+      {{!-- Calendly --}}
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+      <a href="" onclick="Calendly.initPopupWidget({url: '{{cal_three}}'});return false;">
+        <button type="button" class="btn btn-warning">Schedule an Appointment</button>
+      </a>
+    </div>
   </div>
-</div>
 
 {{/each}}

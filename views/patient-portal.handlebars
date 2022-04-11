@@ -5,121 +5,116 @@
     </a>
   </div>
   <div class="card-body py-5">
-    <h4 class="text-uppercase fs-1 fw-light letter-spacing"> Welcome to <strong class="text-info">ChironPortal</strong> </h4>
+    <h4 class="text-uppercase fs-1 fw-light letter-spacing"> Welcome to <strong class="text-info">ChironPortal</strong>
+    </h4>
     <p class="card-text"></p>
   </div>
 </div>
 
 
 {{#each patients}}
-<div class="card bg-light mb-5 mx-5">
-  <div class="bg-image hover-overlay ripple mt-5" data-mdb-ripple-color="light">
-    {{!-- <img src="{{phys_image}}" class="img-fluid" width="200px" /> --}}
-    {{!-- <a href="#!"> --}}
+  <div class="card bg-light mb-5 mx-5">
+    <div class="bg-image hover-overlay ripple mt-5" data-mdb-ripple-color="light">
       <div class="mask"></div>
-    </a>
-  </div>
+      </a>
+    </div>
 
+    <div class="container-fluid fs-5">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="text-center border border-secondary mb-4">
+                <img alt="patient-profile-pic" class="img-fluid" src="{{profile_img}}" width="350" />
+                <h3 class="fs-4 mt-3 mb-4 text-secondary text-uppercase fw-light">
+                  {{first_name}} {{last_name}}
 
+                </h3>
+              </div>
 
+              <address class="m-auto mb-5 mb-1 ms-3">
+                <strong>Home Address:</strong><br>
+                {{street_address}}<br>
+                {{city}}, {{state}} {{zipcode}} <br>
 
-
-
-  <div class="container-fluid fs-5">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="row">
-          <div class="col-md-5">
-            <div class="text-center border border-secondary mb-4">
-              <img alt="patient-profile-pic" class="img-fluid" src="{{profile_img}}" width="350" />
-              <h3 class="fs-4 mt-3 mb-4 text-secondary text-uppercase fw-light">
-                {{first_name}} {{last_name}}
-
-              </h3>
+                <strong>tel: </strong><a class="text-decoration-none text-secondary"
+                  href="tel:{{phone}}">{{phone}}</a><br>
+                <strong>email: </strong><a class="text-decoration-none text-secondary"
+                  href="mailto:{{email}}">{{email}}</a>
+              </address>
             </div>
-          
-            <address class="m-auto mb-5 mb-1 ms-3">
-              <strong>Home Address:</strong><br>
-              {{street_address}}<br>
-              {{city}}, {{state}} {{zipcode}} <br>
-
-              <strong>tel: </strong><a class="text-decoration-none text-secondary" href="tel:{{phone}}">{{phone}}</a><br>
-              <strong>email: </strong><a class="text-decoration-none text-secondary"
-                href="mailto:{{email}}">{{email}}</a>
-            </address>
-          </div>
 
 
-          <div class="col-md-7 mb-5">
-            <dl class="ms-md-5 ms-3">
+            <div class="col-md-7 mb-5">
+              <dl class="ms-md-5 ms-3">
 
-              <dd class="fs-4">
-                {{age}} {{sex}}, {{race}}
-              </dd>
-              <dt>
-                Height:
-              </dt>
-              <dd>
-                {{height}}
-              </dd>
-              <dt>
-                Weight:
-              </dt>
-              <dd>
-                {{weight}}
-              </dd>
+                <dd class="fs-4">
+                  {{age}} {{sex}}, {{race}}
+                </dd>
+                <dt>
+                  Height:
+                </dt>
+                <dd>
+                  {{height}}
+                </dd>
+                <dt>
+                  Weight:
+                </dt>
+                <dd>
+                  {{weight}}
+                </dd>
 
-              {{#if history}}
-              <dt>Family History:</dt>
-              <dd>{{history}}</dd>
-              {{/if}}
+                {{#if history}}
+                  <dt>Family History:</dt>
+                  <dd>{{history}}</dd>
+                {{/if}}
 
-              {{#if drug_use}}
-              <dt>Recreational Drug Use:</dt>
-              <dd>{{drug_use}}</dd>
-              {{/if}}
+                {{#if drug_use}}
+                  <dt>Recreational Drug Use:</dt>
+                  <dd>{{drug_use}}</dd>
+                {{/if}}
 
-              {{#if alcohol_use}}
-              <dt>Alcohol Consumption:</dt>
-              <dd>{{alcohol_use}}</dd>
-              {{/if}}
+                {{#if alcohol_use}}
+                  <dt>Alcohol Consumption:</dt>
+                  <dd>{{alcohol_use}}</dd>
+                {{/if}}
 
-              {{#if rx}}
-              <dt>Prescription(s):</dt>
-              <dd>{{rx}}</dd>
-              {{/if}}
+                {{#if rx}}
+                  <dt>Prescription(s):</dt>
+                  <dd>{{rx}}</dd>
+                {{/if}}
 
-              {{#if dx}}
-              <dt>Previous Diagnosis:</dt>
-              <dd>{{dx}}</dd>
-              {{/if}}
+                {{#if dx}}
+                  <dt>Previous Diagnosis:</dt>
+                  <dd>{{dx}}</dd>
+                {{/if}}
 
-              {{#if procedure}}
-              <dt>Previous Procedures:</dt>
-              <dd>{{procedure}}</dd>
-              {{/if}}
+                {{#if procedure}}
+                  <dt>Previous Procedures:</dt>
+                  <dd>{{procedure}}</dd>
+                {{/if}}
 
-              {{#if allergies}}
-              <dt>Known Allergies:</dt>
-              <dd>{{allergies}}</dd>
-              {{/if}}
+                {{#if allergies}}
+                  <dt>Known Allergies:</dt>
+                  <dd>{{allergies}}</dd>
+                {{/if}}
 
-              {{#if insurance_name}}
-              <dt>Insurance Provider:</dt>
-              <dd>{{insurance_name}}</dd>
-              {{/if}}
+                {{#if insurance_name}}
+                  <dt>Insurance Provider:</dt>
+                  <dd>{{insurance_name}}</dd>
+                {{/if}}
 
-              <a href="/about">
-                <button class=" btn btn-info ml-auto mr-2 btn-lg my-5">Schedule an Appointment</button>
-              </a>
+                <a href="/about">
+                  <button class=" btn btn-info ml-auto mr-2 btn-lg my-5">Schedule an Appointment</button>
+                </a>
 
-            </dl>
+              </dl>
 
 
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  {{/each}}
+{{/each}}
