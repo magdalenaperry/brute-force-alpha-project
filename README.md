@@ -1,4 +1,18 @@
+
+
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
 # Chiron Private Practice
+
+<a href="https://github.com/magdalenaperry/brute-force-alpha-project">
+    <img src="https://via.placeholder.com/200" alt="Logo" width="100%" height="100%">
+  </a>
 
 ## Table of contents
 
@@ -81,3 +95,20 @@ SO THAT I can view all physicians and view my information and make an appointmen
 
 
 [David Aylward's Linkedin](https://www.linkedin.com/in/david-aylward-0a3819230/)
+
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/magdalenaperry/brute-force-alpha-project.svg?style=for-the-badge
+[contributors-url]: https://github.com/magdalenaperry/brute-force-alpha-project/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/magdalenaperry/brute-force-alpha-project.svg?style=for-the-badge
+[forks-url]: https://github.com/magdalenaperry/brute-force-alpha-project/network/members
+[stars-shield]: https://img.shields.io/github/stars/magdalenaperry/brute-force-alpha-project.svg?style=for-the-badge
+[stars-url]: https://github.com/magdalenaperry/brute-force-alpha-project/stargazers
+[issues-shield]: https://img.shields.io/github/issues/magdalenaperry/brute-force-alpha-project.svg?style=for-the-badge
+[issues-url]: https://github.com/magdalenaperry/brute-force-alpha-project/issues
+[license-shield]: https://img.shields.io/github/license/magdalenaperry/brute-force-alpha-project.svg?style=for-the-badge
+[license-url]: https://github.com/magdalenaperry/brute-force-alpha-project/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/magdalenaperry
+[product-screenshot]: images/screenshot.png
+
