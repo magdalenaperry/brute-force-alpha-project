@@ -1,67 +1,52 @@
+<div id="top"></div>
 
+<div align="center">
 
-
+![GitHub followers](https://img.shields.io/github/followers/magdalenaperry?style=for-the-badge)
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+<!-- [![MIT License][license-shield]][license-url] -->
 [![LinkedIn][linkedin-shield]][linkedin-url]
+
+---
 
 # Chiron Private Practice
 
 <a href="https://github.com/magdalenaperry/brute-force-alpha-project">
-    <img src="https://via.placeholder.com/200" alt="Logo" width="100%" height="100%">
+    <img src="https://gravatar.com/avatar/86e910b84e0d541baa?s=400&d=robohash&r=x" alt="Logo" width="150px" height="150px">
   </a>
+
+</div>
 
 ## Table of contents
 
-1. [Description](#Description)
-2. [Visuals](#Visuals)
-3. [Installation](#Installation)
-4. [User Story](#Story)
-5. [Technologies](#Technologies)
-6. [Heroku](#Heroku)
-7. [GitHub](#GitHub)
-8. [Creators](#Creators)
-  
+1. [Description](#description)
+1. [Technologies](#technologies)
+1. [Prerequisites](#prerequisites)
+3. [Installation](#installation)
+3. [Usage](#usage)
+2. [Visuals](#visuals)
+8. [Contributors](#contributors)
+9. [Roadmap](#roadmap)
+10. [Contact](#contact)
+11. [Acknowledgements](#acknowledgements)
 
 ---
 ## Description
 Chiron is an application created with patient and physician interaction in mind. The application has a user authentication system that allows patients to sign up or login and view their patient portal. Upon signup, the patient will create their login credentials, input contact information, patient history, and give information on lifestyle choices regarding drugs/alcohol. This information is then populated into the patient portal, Chiron Portal. Within the portal, the patient has the ability to schedule an appointment and is taken to a list of doctors to select the doctor they would like to see. 
 
+#### Deployed Links:
+[Chiron Repository Link ](https://github.com/magdalenaperry/brute-force-alpha-project)
+
+[Chiron Link ](https://polar-peak-28753.herokuapp.com/)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ---
-## Visuals
-![Chiron Portal](/public/images/chiron.png)
-![Chiron Signup](/public/images/chrion-signup.png)
-![Chiron Portal](/public/images/chiron-login.png)
 
 
----
-## Installation 
-````
-  npm install
-
-  mysql -u root
-    SOURCE db/schema.sql
-    exit
-
-  npm run seed 
-````
-
----
-## User Story
-````
-AS a patient who wants to make an appointment with my physician of choosing
-
-I WANT to able to signup and login onto the Chiron site
-
-SO THAT I can view all physicians and view my information and make an appointment that is best for me.
-````
-
-
----
 ## Technologies
 - axios
 - bcrypt
@@ -72,29 +57,121 @@ SO THAT I can view all physicians and view my information and make an appointmen
 - mysql2
 - sequelize
 
----
-## Heroku 
-
-[Heroku Deployed Link ](https://polar-peak-28753.herokuapp.com/)
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ---
-## GitHub Repository
 
-[Chiron Respository Link ](https://github.com/magdalenaperry/brute-force-alpha-project)
+## Prerequisites
+1. Node.js
+    - [Node.js download](https://nodejs.org/en/)
+2. verify installation
+```  
+    node -v
+    npm -v
+```
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ---
-## Creators
-
-[Michael Hoyle's Linkedin](https://www.linkedin.com/in/michael-hoyle-523143226/)
 
 
-[Magdalena Perry's Linkedin](https://www.linkedin.com/in/magdalena-perry/)
 
 
-[Jasmin Bouasavatdy's Linkedin](https://www.linkedin.com/in/jasmin-bouasavatdy-0a9559227/)
+## Installation
+
+- Install dependencies at root
+```
+    npm install
+```
+
+- Create MYSQL schema
+```
+    mysql -u root
+      SOURCE db/schema.sql
+      exit
+```
+- seed data
+```
+    npm run seed 
+```
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+---
+## Usage
+.ENV variables: 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+---
+
+## Visuals
+<div align="center">
+
+### Homepage
+![Chiron Portal](/public/images/chiron.png)
+
+### Sign Up
+![Chiron Signup](/public/images/chrion-signup.png)
+
+### Login
+![Chiron Portal](/public/images/chiron-login.png)
+
+---
+</div>
 
 
-[David Aylward's Linkedin](https://www.linkedin.com/in/david-aylward-0a3819230/)
+## Contributors
+
+Magdalena Perry: 
+
+- [Linkedin](https://www.linkedin.com/in/magdalena-perry/)
+
+- [Github](https://github.com/magdalenaperry)
+
+Michael Hoyle: 
+
+- [Linkedin](https://www.linkedin.com/in/michael-hoyle-523143226/)
+
+Jasmin Bouasavatdy:
+
+- [Linkedin](https://www.linkedin.com/in/jasmin-bouasavatdy-0a9559227/)
+
+David Aylward: 
+
+- [Linkedin](https://www.linkedin.com/in/david-aylward-0a3819230/)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+---
+## Roadmap
+- [x] Create server.js and connection.js
+- [x] Create MYSQL database
+- [x] Create Models
+- [x] Create seeds
+- [x] Create View pages
+    - [x] Home
+    - [x] About
+    - [x] Patient Portal
+    - [x] Login/Signup
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+---
+## Contact
+For any additional questions, please reach out to me through email and follow me on GitHub.
+
+Name - [Magdalena Perry LinkedIn](https:www.linkedin.com/in/magdalenaperry)
+
+Github - [magdalenaperry](https://www.github.com/magdalenaperry)
+
+email - [mageltron@gmail.com](mageltron@gmail.com)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+---
+## Acknowledgements
+
+- [Img Shields](https://shields.io)
+- [Heroku](https://heroku.com)
+- [Robot Avatars](https://gravatar.com/)
 
 
 
