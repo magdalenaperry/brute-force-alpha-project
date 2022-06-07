@@ -97,7 +97,18 @@ Chiron is an application created with patient and physician interaction in mind.
 
 ---
 ## Usage
-.ENV variables: 
+Create a .env file at the root of your file and add the following environment variables
+
+    DB_NAME=NAMEOFYOURDB
+    DB_USER=root
+    DB_PASSWORD=yourdbpasswordatsetup
+    
+Run your program 
+
+    npm start (or)
+    node server.jss
+    
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ---
