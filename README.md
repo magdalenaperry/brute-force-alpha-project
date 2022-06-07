@@ -197,6 +197,4 @@ email - [mageltron@gmail.com](mageltron@gmail.com)
 [license-shield]: https://img.shields.io/github/license/magdalenaperry/brute-force-alpha-project.svg?style=for-the-badge
 [license-url]: https://github.com/magdalenaperry/brute-force-alpha-project/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/magdalenaperry
-[product-screenshot]: images/screenshot.png
-
+[linkedin-url]: https://linkedin.com/in/magdalena-perry
