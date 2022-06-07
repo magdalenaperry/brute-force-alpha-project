@@ -78,36 +78,40 @@ npm -v
 
 ## Installation
 
-Install dependencies at root
+1. Install dependencies at root
 ```
 npm install
 ```
 
-Create MYSQL schema
+2. Create MYSQL schema
 ```
 mysql -u root
     SOURCE db/schema.sql
     exit
 ```
-Seed data
+3. Seed data
 ```
 npm run seed 
 ```
+
+4. Create a .env file at the root of your file and add the following environment variables
+```
+DB_NAME=NAMEOFYOURDB
+DB_USER=root
+DB_PASSWORD=yourdbpasswordatsetup
+
+```
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ---
 ## Usage
-Create a .env file at the root of your file and add the following environment variables
 
-    DB_NAME=NAMEOFYOURDB
-    DB_USER=root
-    DB_PASSWORD=yourdbpasswordatsetup
-    
-Run your program 
-
-    npm start (or)
-    node server.jss
-    
+1. Run your program 
+```
+npm start (or)
+node server.jss
+```    
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
