@@ -66,8 +66,8 @@ Chiron is an application created with patient and physician interaction in mind.
     - [Node.js download](https://nodejs.org/en/)
 2. verify installation
 ```  
-    node -v
-    npm -v
+node -v
+npm -v
 ```
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -78,20 +78,20 @@ Chiron is an application created with patient and physician interaction in mind.
 
 ## Installation
 
-- Install dependencies at root
+Install dependencies at root
 ```
-    npm install
+npm install
 ```
 
-- Create MYSQL schema
+Create MYSQL schema
 ```
-    mysql -u root
-      SOURCE db/schema.sql
-      exit
+mysql -u root
+    SOURCE db/schema.sql
+    exit
 ```
-- seed data
+Seed data
 ```
-    npm run seed 
+npm run seed 
 ```
 <p align="right">(<a href="#top">back to top</a>)</p>
 
